@@ -7,7 +7,7 @@ const Footer = () => {
       <nav className="px-2 w-full bg-black">
         <div className="container flex flex-wrap items-center justify-between mx-auto">
           <Link href="/" className="flex items-center ml-[3.25rem]">
-            <img alt="image" src="https://www.everestfoods.com/wp-content/uploads/2022/01/everest-logo.svg" className="h-6 mr-3 sm:h-10" alt="Everest Logo" />
+            <img alt="image" src="https://www.everestfoods.com/wp-content/uploads/2022/01/everest-logo.svg" className="h-6 mr-3 sm:h-10" />
             <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
           </Link>
           <div className="w-full md:block md:w-auto" id="navbar-dropdown">
