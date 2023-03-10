@@ -1,12 +1,13 @@
 import SwiperS from './components/Swiper'
 import InfinteSlider from './components/InfinteSlider/InfinteSlider'
 import HeroSlider from './components/HeroSlider/HeroSlider'
+import Image from 'next/image'
 
 export default function Home() {
   return (
     <>
       <div className="h-[90vh]">
-        <img className='h-[100vh]' src='https://www.everestfoods.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2021/09/1.jpg.webp' width={"100%"} />
+        <img className='h-[100vh]' src='https://www.everestfoods.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2021/09/1.jpg.webp' width={"100%"}/>
         <h1 className='text-[3.5rem] tracking-wider font-bold text-white absolute  top-[15rem] left-[7rem]'>India’s Most Trusted</h1>
         <h1 className='text-[3.5rem] tracking-wider font-bold text-white absolute top-[20rem] left-[7rem]'>& Largest Brand</h1>
         <h1 className='text-[3.5rem] tracking-wider font-bold text-white absolute top-[25rem] left-[7rem]'>Of Spices.</h1>
