@@ -24,7 +24,7 @@ const Navbar = () => {
             <nav className={ scrollY <= 75 ? "z-30 px-2 py-7 fixed w-full bg-gradient-to-b from-black" : "z-30 px-2 py-2 fixed w-full bg-black"}>
                 <div className="container flex flex-wrap items-center justify-between mx-auto">
                     <Link href="/" className="flex items-center ml-[3rem]">
-                        <img src="https://www.everestfoods.com/wp-content/uploads/2022/01/everest-logo.svg" className="h-6 mr-3 sm:h-10" alt="Everest Logo" />
+                        <img alt="image" src="https://www.everestfoods.com/wp-content/uploads/2022/01/everest-logo.svg" className="h-6 mr-3 sm:h-10" />
                     </Link>
                     <button data-collapse-toggle="navbar-dropdown" type="button" className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
                         <span className="sr-only">Open main menu</span>

@@ -7,7 +7,7 @@ const Footer = () => {
       <nav className="px-2 w-full bg-black">
         <div className="container flex flex-wrap items-center justify-between mx-auto">
           <Link href="/" className="flex items-center ml-[3.25rem]">
-            <img src="https://www.everestfoods.com/wp-content/uploads/2022/01/everest-logo.svg" className="h-6 mr-3 sm:h-10" alt="Everest Logo" />
+            <img alt="image" src="https://www.everestfoods.com/wp-content/uploads/2022/01/everest-logo.svg" className="h-6 mr-3 sm:h-10" alt="Everest Logo" />
             <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
           </Link>
           <div className="w-full md:block md:w-auto" id="navbar-dropdown">
@@ -41,12 +41,12 @@ const Footer = () => {
         <div class="contact">
           <h4 className='text-white'>EVEREST Food Products Pvt. Ltd.</h4>
           <div class="flex">
-            <img class="mt-[-1.5rem] mr-[1rem]" src="https://www.everestfoods.com/wp-content/uploads/2021/09/pin-1.svg" />
+            <img alt="image" class="mt-[-1.5rem] mr-[1rem]" src="https://www.everestfoods.com/wp-content/uploads/2021/09/pin-1.svg" />
             <p class="w-[21.5rem] mt-[0.5rem] text-[0.9rem] text-white">5th Floor, Krushal Commercial Complex, G. M. Road, Amar Mahal, Chembur (West)
               Mumbai – 400 089.</p>
           </div>
           <div class="flex">
-            <img class="mt-[0.5rem] mr-[1rem]" src="https://www.everestfoods.com/wp-content/uploads/2021/09/tel.svg" />
+            <img alt="image" class="mt-[0.5rem] mr-[1rem]" src="https://www.everestfoods.com/wp-content/uploads/2021/09/tel.svg" />
             <p class="w-[20rem] mt-[1rem] text-[0.9rem] text-white">+ 91 22 40997700.</p>
           </div>
         </div>
