@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const products = () => {
 
-    const [hover, setHover] = useState(false)
 
     const products = [
         {
