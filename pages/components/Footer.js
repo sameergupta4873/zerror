@@ -7,7 +7,7 @@ const Footer = () => {
       <nav className="px-2 w-full bg-black">
         <div className="container flex flex-wrap items-center justify-between mx-auto">
           <Link href="/" className="flex items-center ml-[3.25rem]">
-            <img alt="image" src="https://www.everestfoods.com/wp-content/uploads/2022/01/everest-logo.svg" className="h-6 mr-3 sm:h-10" />
+            <img alt="image" src="Aadesh English Logo.png" className="" height={125} width={100} />
             <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
           </Link>
           <div className="w-full md:block md:w-auto" id="navbar-dropdown">
@@ -39,15 +39,14 @@ const Footer = () => {
       </nav>
       <div class="flex my-[3rem] mx-[8rem]">
         <div class="contact">
-          <h4 className='text-white'>EVEREST Food Products Pvt. Ltd.</h4>
+          <h4 className='text-white'>Aadesh Masale Pvt. Ltd.</h4>
           <div class="flex">
-            <img alt="image" class="mt-[-1.5rem] mr-[1rem]" src="https://www.everestfoods.com/wp-content/uploads/2021/09/pin-1.svg" />
-            <p class="w-[21.5rem] mt-[0.5rem] text-[0.9rem] text-white">5th Floor, Krushal Commercial Complex, G. M. Road, Amar Mahal, Chembur (West)
-              Mumbai – 400 089.</p>
+            <img alt="image" class="mt-[0rem] mr-[1rem]" src="https://www.everestfoods.com/wp-content/uploads/2021/09/pin-1.svg" />
+            <p class="w-[15rem] mt-[0.5rem] text-[0.9rem] text-white">Jangal Ramnagar, Raipur, Phulawari, Amethi, UP 227405</p>
           </div>
           <div class="flex">
             <img alt="image" class="mt-[0.5rem] mr-[1rem]" src="https://www.everestfoods.com/wp-content/uploads/2021/09/tel.svg" />
-            <p class="w-[20rem] mt-[1rem] text-[0.9rem] text-white">+ 91 22 40997700.</p>
+            <p class="w-[20rem] mt-[1rem] text-[0.9rem] text-white">+91 7607581221, +91 8400382790</p>
           </div>
         </div>
         <div class="text-white">
