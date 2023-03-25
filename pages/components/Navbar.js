@@ -25,7 +25,7 @@ const Navbar = () => {
             <nav className={scrollY <= 75 ? "z-30 px-2 py-7 fixed w-full bg-gradient-to-b from-black" : "z-30 px-2 py-2 fixed w-full bg-black"}>
                 <div className="container flex flex-wrap items-center justify-between mx-auto">
                     <Link href="/" className="flex items-center ml-[3rem]">
-                        <img alt="Aadesh Masala Logo" src="Aadesh English Logo.png" className="" height={scrollY <= 75 ? 125 : 75} width={scrollY <= 75 ? 100 : 75} />
+                        <img alt="Aadesh Masala Logo" src="/Aadesh English Logo.png" className="" height={scrollY <= 75 ? 125 : 75} width={scrollY <= 75 ? 100 : 75} />
                     </Link>
                     <button data-collapse-toggle="navbar-dropdown" type="button" className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
                         <span className="sr-only">Open main menu</span>
@@ -43,8 +43,8 @@ const Navbar = () => {
                                 <div id="dropdown" class="absolute mt-2 ml-12 z-10 bg-white divide-y divide-gray-100 rounded-md w-24">
                                     {
                                         show &&
-                                        <ul class="text-sm dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-                                            <li className='border-b border-gray-400'>
+                                        <ul class="text-sm" aria-labelledby="dropdownDefaultButton">
+                                            <li className='border-b border-gray-700'>
                                                 <Link href="/about" class="block px-4 py-2 hover:text-red-500">About Us</Link>
                                             </li>
                                             <li>

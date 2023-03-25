@@ -7,8 +7,8 @@ const Footer = () => {
       <nav className="px-2 w-full bg-black">
         <div className="container flex flex-wrap items-center justify-between mx-auto">
           <Link href="/" className="flex items-center ml-[3.25rem]">
-            <img alt="image" src="Aadesh English Logo.png" className="" height={125} width={100} />
-            <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+            <img alt="image" src="/Aadesh English Logo.png" className="" height={125} width={100} />
+            <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white"></span>
           </Link>
           <div className="w-full md:block md:w-auto" id="navbar-dropdown">
             <ul className="flex flex-col p-4 mt-4 md:flex-row md:space-x-10 md:mt-0 md:text-sm md:font-medium md:border-0">
