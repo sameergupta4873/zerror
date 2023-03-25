@@ -1,7 +1,7 @@
 import React, { useLayoutEffect, useRef } from 'react'
 import gsap from 'gsap'
 
-export function FadeIn({ children, vars }) {
+export default function FadeIn({ children, vars }) {
     const el = useRef();
     const animation = useRef();
 

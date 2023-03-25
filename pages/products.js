@@ -1,6 +1,5 @@
 import React from 'react'
 import products from '../data/products'
-import { FadeIn } from './components/gsap/FadeIn'
 
 const Products = () => {
 

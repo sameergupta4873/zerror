@@ -1,5 +1,5 @@
 import React, { useLayoutEffect, useRef } from 'react'
-import { FadeIn } from './components/gsap/FadeIn'
+import  FadeIn  from './components/gsap/FadeIn'
 
 const about = () => {
 
