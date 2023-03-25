@@ -1,6 +1,7 @@
 import React from 'react'
 import products from '../../data/products'
 import { useRouter } from 'next/router';
+import Link from 'next/link'
 
 const Product = () => {
 
