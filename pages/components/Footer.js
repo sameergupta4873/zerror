@@ -9,7 +9,7 @@ const Footer = () => {
     });
   };
   return (
-    <div className='bg-[#e0191a] pt-8 border border-[#e0191a]'>
+    <div className='bg-[#e0191a] pt-[9rem] border border-[#e0191a]'>
       <nav className="px-2 w-full bg-[#e0191a]">
         <div className='flex'>
           <Link href="/" className="my-[3.25rem] ml-[7rem]">
@@ -51,27 +51,27 @@ const Footer = () => {
           </div>
         </div>
       </nav>
-      <div class="flex my-[3rem] mx-[8rem]">
-        <div class="contact">
+      <div className="flex my-[3rem] mx-[8rem]">
+        <div className="contact">
           <h4 className='text-white'>Aadesh Masale Pvt. Ltd.</h4>
-          <div class="flex">
-            <img alt="image" class="mt-[0rem] mr-[1rem]" src="https://www.everestfoods.com/wp-content/uploads/2021/09/pin-1.svg" />
-            <p class="w-[15rem] mt-[0.5rem] text-[0.9rem] text-white">Jangal Ramnagar, Raipur, Phulawari, Amethi, UP 227405</p>
+          <div className="flex">
+            <img alt="image" className="mt-[0rem] mr-[1rem]" src="https://www.everestfoods.com/wp-content/uploads/2021/09/pin-1.svg" />
+            <p className="w-[15rem] mt-[0.5rem] text-[0.9rem] text-white">Jangal Ramnagar, Raipur, Phulawari, Amethi, UP 227405</p>
           </div>
-          <div class="flex">
-            <img alt="image" class="mt-[0.5rem] mr-[1rem]" src="https://www.everestfoods.com/wp-content/uploads/2021/09/tel.svg" />
-            <p class="w-[20rem] mt-[1rem] text-[0.9rem] text-white">+91 7607581221, +91 8400382790</p>
+          <div className="flex">
+            <img alt="image" className="mt-[0.5rem] mr-[1rem]" src="https://www.everestfoods.com/wp-content/uploads/2021/09/tel.svg" />
+            <p className="w-[20rem] mt-[1rem] text-[0.9rem] text-white">+91 7607581221, +91 8400382790</p>
           </div>
         </div>
       </div>
-      <div class="flex justify-between mx-[8rem] text-[0.9rem] text-white mb-[1rem]">
+      <div className="flex justify-between mx-[8rem] text-[0.9rem] text-white mb-[1rem]">
         <p>CIN: U15100MH2020PTC339&38</p>
       </div>
-      <div class="flex justify-between mx-[8rem] text-[0.9rem] text-white mb-[0rem]">
+      <div className="flex justify-between mx-[8rem] text-[0.9rem] text-white mb-[0rem]">
         <p>Copyright © 2023 Everest Spices. All rights reserved.</p>
-        <button type="button" class="border border-white p-7 -translate-y-20 rounded-full" onClick={scrollToTop}>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 19.5v-15m0 0l-6.75 6.75M12 4.5l6.75 6.75" />
+        <button type="button" className="border border-white p-7 -translate-y-20 rounded-full" onClick={scrollToTop}>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-8 h-8">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12 19.5v-15m0 0l-6.75 6.75M12 4.5l6.75 6.75" />
           </svg>
 
         </button>

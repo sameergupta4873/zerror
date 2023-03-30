@@ -4,20 +4,13 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Link from 'next/link';
 import { Spin as Hamburger } from 'hamburger-react'
 import { MotionPathPlugin } from 'gsap/dist/MotionPathPlugin';
-import ReactCurvedText from 'react-curved-text';
 
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
-const Hero = () => {
+const Menu = () => {
     const [rotate, setrotate] = useState(false)
 
     const track = useRef(null);
-    const move = useRef(null);
-    const move2 = useRef(null);
-    const move3 = useRef(null);
-    const img = useRef(null);
-    const heading = useRef(null);
-    const heading2 = useRef(null);
     const banner = useRef(null);
     const list = useRef(null);
     const list2 = useRef(null);
@@ -31,62 +24,7 @@ const Hero = () => {
     const cnt3 = useRef(null);
     useEffect(() => {
 
-        const t = track.current;
-        const el = move.current;
-        const el2 = move2.current;
-        const el3 = move3.current;
-        const el4 = heading.current;
-        const el5 = heading2.current;
 
-
-        gsap.fromTo(el,
-            { x: 0, y: 0 },
-            {
-                duration: 0.5, ease: "power1.inOut", motionPath:
-                {
-                    path: [{
-                        x: '2.5rem', y: '3rem'
-                    },
-                    { x: '4.5rem', y: '7rem' },
-                    { x: '6rem', y: '11rem' },
-                    { x: '6.5rem', y: '15rem' },
-                    { x: '6.25rem', y: '19rem' }]
-                }
-            },
-        );
-        gsap.fromTo(el2,
-            { x: 0, y: 0 },
-            {
-                duration: 0.5, ease: "power1.inOut", motionPath:
-                {
-                    path: [{
-                        x: '-0.15rem', y: '4rem'
-                    },
-                    { x: '0rem', y: '11rem' },
-                    { x: '-0.75rem', y: '18rem' },
-                    { x: '-2.75rem', y: '25rem' },
-                    { x: '-8.5rem', y: '31.5rem' }]
-                }
-            },
-        );
-        gsap.fromTo(el3,
-            { x: 0, y: 0 },
-            {
-                duration: 0.5, ease: "power1.inOut", motionPath:
-                {
-                    path: [{
-                        x: '-1rem', y: '6.75rem'
-                    },
-                    { x: '-3rem', y: '11rem' },
-                    { x: '-5rem', y: '15rem' },
-                    { x: '-10rem', y: '16.1rem' },
-                    { x: '-15rem', y: '16.25rem' },
-                    { x: '-20rem', y: '16.25rem' }]
-                }
-            },
-        );
-        gsap.fromTo(el4, { y: -750 }, { y: 0, duration: 0.75 });
-        gsap.fromTo(el5, { y: -750 }, { y: 0, duration: 0.6 });
         document.addEventListener("mousemove", handleMouseMove);
 
         return () => {
@@ -121,11 +59,6 @@ const Hero = () => {
     };
 
     const handleAnimation = () => {
-        const el = move.current;
-        const el2 = move2.current;
-        const el3 = move3.current;
-        const el4 = heading.current;
-        const el5 = heading2.current;
         const el6 = banner.current;
         const el7 = list.current;
         const el8 = list2.current;
@@ -140,13 +73,6 @@ const Hero = () => {
             gsap.to(el8, { x: 0, duration: 0.25 });
             gsap.to(el9, { x: 0, duration: 0.25 });
             gsap.to(el10, { x: 0, duration: 0.25 });
-            const el = move.current;
-            const el2 = move2.current;
-            const el3 = move3.current;
-            const el4 = heading.current;
-            const el5 = heading2.current;
-            gsap.fromTo(el4, { y: -250 }, { y: 0, duration: 0.6 });
-            gsap.fromTo(el5, { y: -250 }, { y: 0, duration: 0.6 });
 
         } else {
             let tl = gsap.timeline();
@@ -167,60 +93,11 @@ const Hero = () => {
     }
 
     return (
-        <div className='w-full h-[62rem] bg-[#e0191a]' ref={track}>
+        <div className='block bg-[#e0191a]' ref={track}>
             <button className='fixed z-50 top-5 left-8 flex' onClick={() => setrotate(!rotate)}>
                 <Hamburger color='white' size={30} rounded toggled={rotate} toggle={setrotate} onToggle={handleAnimation} />
             </button>
-            <img alt="Aadesh Masala Logo" src="/Aadesh English Logo.png" className='absolute z-50 top-[1rem] left-[50%] h-[10rem] w-[10rem] mx-auto py-5' />
             <div className={`bg-[#e0191a] z-30 fixed h-[61rem] w-[120rem] left-[-120rem]`} ref={banner}></div>
-            <>
-                <div className='z-30 bg-[#e0191a] absolute w-[50rem] h-[11.5rem] top-[0rem] left-[7rem]'>
-                </div>
-
-                <div className='font' ref={heading}>
-                    <ReactCurvedText
-                        width={680}
-                        height={600}
-                        cx={450}
-                        cy={500}
-                        rx={250}
-                        ry={250}
-                        startOffset={50}
-                        reversed={true}
-                        text="Indian Spices"
-                        textProps={{
-                            style: {
-                                fontSize: 75,
-                            }
-                        }}
-                        textPathProps={{ "fill": "#EBFE00" }}
-                        tspanProps={null}
-                        ellipseProps={null}
-                        svgProps={null}
-                    />
-                </div>
-
-
-                <div className={`inline-block w-[55rem] absolute mt-[-17rem] ml-[17rem]`} ref={heading2}>
-                    <p className='text-[#EBFE00] text-[5rem] tracking-[-0.4rem]'>AADESH MASALE</p>
-                    <p className="text-[1.5rem] text-white">An amazing range of spices, healthy and nutritious</p>
-                    <Link href="/products">
-                        <button className='px-10 my-2 py-2 border-4 border-[#EBFE00] rounded-[3rem] text-2xl text-[#EBFE00] hover:text-[#e0191a] hover:bg-[#EBFE00] hover:border-[#e0191a]'>
-                            Products
-                        </button>
-                    </Link>
-                </div>
-
-                <div className='absolute top-[-10rem] left-[59rem] -rotate-12' ref={move}>
-                    <img alt="Aadesh Masala Logo" src="/products/ChikenMasala.png" className='h-[20rem] w-[19rem]' ref={img} />
-                </div>
-                <div className='absolute top-[1.5rem] left-[49.75rem] -rotate-6' ref={move2}>
-                    <img alt="Aadesh Masala Logo" src="/products/ChanaBesan.png" className='h-[20rem] w-[19rem]' />
-                </div>
-                <div className='absolute top-[22rem] left-[30rem]' ref={move3}>
-                    <img alt="Aadesh Masala Logo" src="/products/JaljeeraMasala.png" className='h-[20rem] w-[19rem] origin-center' />
-                </div>
-            </>
             <div className='fixed z-40 bg-[#e0191a] w-[5rem] h-[6rem] top-[13rem]'>
             </div>
             <div className='fixed z-30 top-[13rem] left-[-20rem] '>
@@ -286,4 +163,4 @@ const Hero = () => {
     )
 }
 
-export default Hero;
+export default Menu;

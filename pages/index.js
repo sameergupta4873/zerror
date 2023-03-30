@@ -3,9 +3,7 @@ import InfinteSlider from './components/InfinteSlider/InfinteSlider'
 import Link from 'next/link'
 import products from '../data/products'
 import { useState } from 'react'
-import FadeIn from './components/gsap/FadeIn'
 import Hero from './hero'
-import Footer from './components/Footer'
 
 
 export default function Home() {
@@ -13,102 +11,101 @@ export default function Home() {
   console.log(index);
   return (
     <>
-      
-      {/* <div className="h-[80vh]">
-        <img className='h-[87vh]' src='https://www.everestfoods.com/wp-content/webp-express/webp-images/doc-root/wp-content/uploads/2021/09/2.jpg.webp' width={"100%"} />
-        <h1 className='text-[3.5rem] tracking-wider font-bold text-white absolute  top-[15rem] left-[7rem]'>India’s Most Trusted</h1>
-        <h1 className='text-[3.5rem] tracking-wider font-bold text-white absolute top-[20rem] left-[7rem]'>& Largest Brand</h1>
-        <h1 className='text-[3.5rem] tracking-wider font-bold text-white absolute top-[25rem] left-[7rem]'>Of Spices.</h1>
-
-      </div> */}
-
-
-      <Hero/>
-      <div className='my-[8rem]'>
+      <Hero />
+      <div className='bg-[#e0191a] pt-[5rem] pb-[5rem]'>
         <div className='w-[80%] mx-auto py-[1rem]'>
-          <p className='text-[2rem] tracking-wider text-center leading-[4.3rem]'>
-            Welcome to <span className='font-bold border-b-[0.4rem] border-black'>AADESH MASALA</span> , 
-            an Indian spices brand that is dedicated to bringing 
-            the <span className='font-bold border-b-[0.4rem] border-black'>FLAVOURS</span> of 
-            traditional <span className='font-bold border-b-[0.4rem] border-black'>INDIAN CUISINE</span> to 
-            every <span className='font-bold border-b-[0.4rem] border-black'>HOUSEHOLD</span> in 
-            India. At Aadesh Masala, we believe 
-            that <span className='font-bold border-b-[0.4rem] border-black'>SPICES</span> are 
-            the <span className='font-bold border-b-[0.4rem] border-black'>ESSENCE OF INDIAN COOKING</span> . 
-            They not only add flavor to our dishes but also provide 
-            numerous <span className='font-bold border-b-[0.4rem] border-black'>HEALTH BENEFITS</span> . 
-            Our mission is to provide 
-            the <span className='font-bold border-b-[0.4rem] border-black'>BEST QUALITY SPICES</span> to 
-            our customers, ensuring that every meal 
-            is <span className='font-bold border-b-[0.4rem] border-black'>FULL OF FLAVOURS</span> and 
-            packed with <span className='font-bold border-b-[0.4rem] border-black'>NUTRITION</span> .
+          <p className='text-[2rem] tracking-wider text-center leading-[4.3rem] text-[#EBFE00]'>
+            Welcome to <span className='font-bold border-b-[0.3rem] font border-[#EBFE00]'>AADESH MASALA</span> ,
+            an Indian spices brand that is dedicated to bringing
+            the <span className='font-bold border-b-[0.3rem] font border-[#EBFE00]'>FLAVOURS</span> of
+            traditional <span className='font-bold border-b-[0.3rem] font border-[#EBFE00]'>INDIAN CUISINE</span> to
+            every <span className='font-bold border-b-[0.3rem] font border-[#EBFE00]'>HOUSEHOLD</span> in
+            India. At Aadesh Masala, we believe
+            that <span className='font-bold border-b-[0.3rem] font border-[#EBFE00]'>SPICES</span> are
+            the <span className='font-bold border-b-[0.3rem] font border-[#EBFE00]'>ESSENCE OF INDIAN COOKING</span>.
+            They not only add flavor to our dishes but also provide
+            numerous <span className='font-bold border-b-[0.3rem] font border-[#EBFE00]'>HEALTH BENEFITS</span>.
+            Our mission is to provide
+            the <span className='font-bold border-b-[0.3rem] font border-[#EBFE00]'>BEST QUALITY SPICES</span> to
+            our customers, ensuring that every meal
+            is <span className='font-bold border-b-[0.3rem] font border-[#EBFE00]'>FULL OF FLAVOURS</span> and
+            packed with <span className='font-bold border-b-[0.3rem] font border-[#EBFE00]'>NUTRITION</span>.
           </p>
         </div>
-        <div class="flex justify-between mb-[2rem] mx-[3rem] mt-[5rem]">
-          <h1 class="text-[2.7rem] font-bold mb-[1rem]">Products You Will Love</h1>
-        </div>
-        <div class="w-full flex px-4 text-center items-center justify-center">
-          <div class="border z-20 bg-white border-gray-300 absolute left-6
-           inline-block rounded p-3 sm:mb-12 mr-[-1rem] sm:mr-0 transform -rotate-90 sm:transform-none hover:text-darkBlueGray-400" onClick={() => {
+        <div className="flex justify-between mb-[2rem] mx-[5rem] mt-[10rem] w-[90%]">
+          <h1 className="text-[2.7rem] text-[#FFFFFF] font-bold mb-[0rem] ml-[5rem]">Products You Will Love</h1>
+          <div className='flex'>
+            <div className="border-[0.2rem] mr-7 p-4 bg-[#e0191a] border-[#FFFFFF] rounded-full text-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-[#e0191a]" onClick={() => {
               if (index <= 0) {
                 setIndex(8);
               } else {
                 setIndex(index - 4)
               }
             }}>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" />
-            </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-7 h-7">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" />
+              </svg>
+            </div>
+            <div className="border-[0.2rem] mr-5 p-4 bg-[#e0191a] border-[#FFFFFF] rounded-full w-[rem] flex text-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-[#e0191a]" onClick={() => {
+              if (index >= 8) {
+                setIndex(0);
+              } else {
+                setIndex(index + 4)
+              }
+            }}>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-7 h-7">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+              </svg>
+
+            </div>
           </div>
-          <FadeIn vars={{ y: -100 }}>
-            <Link class={`h-30 block mb-4 mr-20 ml-20 py-20 px-10 rounded-[25px]`} href={products[index].href} style={{backgroundColor:products[index].bg}}>
-              <img class="h-[20rem] w-[18rem] transition duration-500 hover:scale-110" src={'/' + products[index].imageSrc} alt="" />
-            </Link>
-          </FadeIn>
-          <FadeIn vars={{ y: -100 }}>
-            <Link class={`h-30 block mb-4 mr-20 py-20 px-10 rounded-[25px]`} href={products[index + 1].href} style={{backgroundColor:products[index+1].bg}}>
-              <img class="h-[20rem] w-[18rem] transition duration-500 hover:scale-110" src={'/' + products[index + 1].imageSrc} alt="" />
-            </Link>
-          </FadeIn>
-          <FadeIn vars={{ y: -100 }}>
-            <Link class={`h-30 block mb-4 mr-20 py-20 px-10 rounded-[25px]`} href={products[index + 1].href} style={{backgroundColor:products[index+2].bg}}>
-              <img class="h-[20rem] w-[18rem] transition duration-500 hover:scale-110" src={'/' + products[index + 2].imageSrc} alt="" />
-            </Link>
-          </FadeIn>
-
-          <div class="inline-block bg-white absolute border border-gray-300 right-7 rounded p-3 transform -rotate-90 sm:transform-none hover:text-darkBlueGray-400" onClick={() => {
-            if (index >= 8) {
-              setIndex(0);
-            } else {
-              setIndex(index + 4)
-            }
-          }}>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-            </svg>
-
-          </div>
-
         </div>
-        <div className='w-[10rem] mx-auto my-5'>
-          <Link href="/products" class="bg-black text-white p-3 rounded w-[10rem] flex pl-9">
-            View All
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 ml-3">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-            </svg>
-
+        <div className="w-full ml-10 flex px-5 items-center justify-center">
+          <Link className={`h-30 block mb-4 mr-10 ml-5 pt-20 pb-9 px-16 rounded-[25px]`} href={products[index].href} style={{ backgroundColor: products[index].bg }}>
+            <img className="h-[20rem] w-[18rem] transition duration-500 hover:scale-110" src={'/' + products[index].imageSrc} alt="" />
+            <p className='text-xl font-extrabold mt-6'>{products[index].name}</p>
+            <div className='mt-4 flex'>
+              <p className='text-xl font-extrabold'>{products[index].price}</p>
+              <Link href={`/product/${products[index].id}`} className='px-4 py-1 pt-2 ml-[50%] flex bg-[#e0191a] rounded-full text-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-[#e0191a] border-2 border-transparent hover:border-[#e0191a]'>
+                Details
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" className="w-5 h-5 ml-2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </Link>
+            </div>
+          </Link>
+          <Link className={`h-30 block mb-4 mr-5 pt-20 pb-9 px-16 rounded-[25px]`} href={products[index + 1].href} style={{ backgroundColor: products[index + 1].bg }}>
+            <img className="h-[20rem] w-[18rem] transition duration-500 hover:scale-110" src={'/' + products[index + 1].imageSrc} alt="" />
+            <p className='text-xl font-extrabold mt-6'>{products[index + 1].name}</p>
+            <div className='mt-4 flex'>
+              <p className='text-xl font-extrabold'>{products[index + 1].price}</p>
+              <Link href={`/product/${products[index + 1].id}`} className='px-4 py-1 pt-2 ml-[50%] flex bg-[#e0191a] rounded-full text-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-[#e0191a] border-2 border-transparent hover:border-[#e0191a]'>
+                Details
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" className="w-5 h-5 ml-2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </Link>
+            </div>
+          </Link>
+          <Link className={`h-30 block mb-4 mr-10 ml-5 pt-20 pb-9 px-16 rounded-[25px]`} href={products[index].href} style={{ backgroundColor: products[index + 2].bg }}>
+            <img className="h-[20rem] w-[18rem] transition duration-500 hover:scale-110" src={'/' + products[index + 2].imageSrc} alt="" />
+            <p className='text-xl font-extrabold mt-6'>{products[index + 2].name}</p>
+            <div className='mt-4 flex'>
+              <p className='text-xl font-extrabold'>{products[index + 2].price}</p>
+              <Link href={`/product/${products[index + 2].id}`} className='px-4 py-1 pt-2 ml-[50%] flex bg-[#e0191a] rounded-full text-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-[#e0191a] border-2 border-transparent hover:border-[#e0191a]'>
+                Details
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" className="w-5 h-5 ml-2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </Link>
+            </div>
           </Link>
         </div>
       </div>
-      <div class="flex justify-between my-[3rem] mx-[8rem]">
-        <h1 class="text-[2.7rem] font-bold">Recipes For Your Soul</h1>
-        {/* <button class="bg-black text-white px-[1.5rem] rounded-md">Visit Everest’s Kitchen</button> */}
+      <div className='bg-[#e0191a]'>
+        <h1 className="text-[2.7rem] text-[#FFFFFF] font-bold mx-[7rem] py-[3rem]">Recipes For Your Soul</h1>
+        <SwiperS />
       </div>
-      <SwiperS />
-      <div className='mt-[5rem]'>
-        <InfinteSlider />
-      </div>
-      <Footer/>
     </>
   )
 }
