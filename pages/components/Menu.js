@@ -102,7 +102,7 @@ const Menu = () => {
             </div>
             <div className='fixed z-30 top-[13rem] left-[-20rem] '>
                 <Link href='/'>
-                    <p className="text-white relative hover:text-[#e0191a] group transition-all delay-10 duration-200 ease-linear text-[4rem] scale-y-[120%] h-[5rem] w-[12rem]" ref={list}>
+                    <p className="text-white title relative hover:text-[#e0191a] group transition-all delay-10 duration-200 ease-linear text-[4rem] scale-y-[120%] px-3 h-[5rem] w-[13rem]" ref={list}>
                         <span>Home</span>
                         <span className="absolute left-0 -bottom-1 w-full h-0 bg-[#EBFE00] duration-200 delay-75 -z-10 group-hover:h-full group-hover:transition-all"></span>
                     </p>
@@ -112,7 +112,7 @@ const Menu = () => {
             </div>
             <div className='fixed z-30 top-[21rem] left-[-20rem]'>
                 <Link href='/products'>
-                    <p className="text-white relative hover:text-[#e0191a] group transition-all delay-10 duration-200 ease-linear text-[4rem] scale-y-[120%] h-[5rem] w-[17rem]" ref={list2}>
+                    <p className="text-white title relative hover:text-[#e0191a] group transition-all delay-10 duration-200 ease-linear text-[4rem] scale-y-[120%] h-[5rem] px-3 w-[20rem]" ref={list2}>
                         <span>Products</span>
                         <span className="absolute left-0 -bottom-1 w-full h-0 bg-[#EBFE00] duration-200 delay-75 -z-10 group-hover:h-full group-hover:transition-all"></span>
                     </p>
@@ -122,7 +122,7 @@ const Menu = () => {
             </div>
             <div className='fixed z-30 top-[29rem] left-[-20rem]'>
                 <Link href='/about'>
-                    <p className="text-white relative hover:text-[#e0191a] group transition-all delay-10 duration-200 ease-linear text-[4rem] scale-y-[120%] h-[5rem] w-[18rem]" ref={list3}>
+                    <p className="text-white title relative hover:text-[#e0191a] group transition-all delay-10 duration-200 ease-linear text-[4rem] scale-y-[120%] h-[5rem] px-3 w-[20rem]" ref={list3}>
                         <span>About Us</span>
                         <span className="absolute left-0 -bottom-1 w-full h-0 bg-[#EBFE00] duration-200 delay-75 -z-10 group-hover:h-full group-hover:transition-all"></span>
                     </p>

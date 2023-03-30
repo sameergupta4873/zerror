@@ -56,17 +56,16 @@ export default function Home() {
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-7 h-7">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
               </svg>
-
             </div>
           </div>
         </div>
         <div className="w-full ml-10 flex px-5 items-center justify-center">
           <Link className={`h-30 block mb-4 mr-10 ml-5 pt-20 pb-9 px-16 rounded-[25px]`} href={products[index].href} style={{ backgroundColor: products[index].bg }}>
-            <img className="h-[20rem] w-[18rem] transition duration-500 hover:scale-110" src={'/' + products[index].imageSrc} alt="" />
+            <img className="h-[50%] w-[15rem] transition duration-500 hover:scale-110" src={'/' + products[index].imageSrc} alt="" />
             <p className='text-xl font-extrabold mt-6'>{products[index].name}</p>
             <div className='mt-4 flex'>
               <p className='text-xl font-extrabold'>{products[index].price}</p>
-              <Link href={`/product/${products[index].id}`} className='px-4 py-1 pt-2 ml-[50%] flex bg-[#e0191a] rounded-full text-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-[#e0191a] border-2 border-transparent hover:border-[#e0191a]'>
+              <Link href={`/product/${products[index].id}`} className='px-4 py-1 pt-2 ml-[50%] flex bg-[#e0191a] rounded-full text-[#FFFFFF] border-2 border-transparent'>
                 Details
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" className="w-5 h-5 ml-2">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -75,11 +74,11 @@ export default function Home() {
             </div>
           </Link>
           <Link className={`h-30 block mb-4 mr-5 pt-20 pb-9 px-16 rounded-[25px]`} href={products[index + 1].href} style={{ backgroundColor: products[index + 1].bg }}>
-            <img className="h-[20rem] w-[18rem] transition duration-500 hover:scale-110" src={'/' + products[index + 1].imageSrc} alt="" />
+            <img className="h-[50%] w-[15rem] transition duration-500 hover:scale-110" src={'/' + products[index + 1].imageSrc} alt="" />
             <p className='text-xl font-extrabold mt-6'>{products[index + 1].name}</p>
             <div className='mt-4 flex'>
               <p className='text-xl font-extrabold'>{products[index + 1].price}</p>
-              <Link href={`/product/${products[index + 1].id}`} className='px-4 py-1 pt-2 ml-[50%] flex bg-[#e0191a] rounded-full text-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-[#e0191a] border-2 border-transparent hover:border-[#e0191a]'>
+              <Link href={`/product/${products[index + 1].id}`} className='px-4 py-1 pt-2 ml-[50%] flex bg-[#e0191a] rounded-full text-[#FFFFFF] border-2 border-transparent'>
                 Details
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" className="w-5 h-5 ml-2">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -87,12 +86,25 @@ export default function Home() {
               </Link>
             </div>
           </Link>
-          <Link className={`h-30 block mb-4 mr-10 ml-5 pt-20 pb-9 px-16 rounded-[25px]`} href={products[index].href} style={{ backgroundColor: products[index + 2].bg }}>
-            <img className="h-[20rem] w-[18rem] transition duration-500 hover:scale-110" src={'/' + products[index + 2].imageSrc} alt="" />
+          <Link className={`h-30 block mb-4 mr-10 ml-5 pt-20 pb-9 px-16 rounded-[25px]`} href={products[index+2].href} style={{ backgroundColor: products[index + 2].bg }}>
+            <img className="h-[50%] w-[15rem] transition duration-500 hover:scale-110" src={'/' + products[index + 2].imageSrc} alt="" />
             <p className='text-xl font-extrabold mt-6'>{products[index + 2].name}</p>
             <div className='mt-4 flex'>
               <p className='text-xl font-extrabold'>{products[index + 2].price}</p>
-              <Link href={`/product/${products[index + 2].id}`} className='px-4 py-1 pt-2 ml-[50%] flex bg-[#e0191a] rounded-full text-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-[#e0191a] border-2 border-transparent hover:border-[#e0191a]'>
+              <Link href={`/product/${products[index + 2].id}`} className='px-4 py-1 pt-2 ml-[50%] flex bg-[#e0191a] rounded-full text-[#FFFFFF] border-2 border-transparent'>
+                Details
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" className="w-5 h-5 ml-2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </Link>
+            </div>
+          </Link>
+          <Link className={`h-30 block mb-4 mr-10 pt-20 pb-9 px-16 rounded-[25px]`} href={products[index+3].href} style={{ backgroundColor: products[index + 3].bg }}>
+            <img className="h-[50%] w-[15rem] transition duration-500 hover:scale-110" src={'/' + products[index + 3].imageSrc} alt="" />
+            <p className='text-xl font-extrabold mt-6'>{products[index + 3].name}</p>
+            <div className='mt-4 flex'>
+              <p className='text-xl font-extrabold'>{products[index + 3].price}</p>
+              <Link href={`/product/${products[index + 3].id}`} className='px-4 py-1 pt-2 ml-[50%] flex bg-[#e0191a] rounded-full text-[#FFFFFF] border-2 border-transparent'>
                 Details
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" className="w-5 h-5 ml-2">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -103,7 +115,7 @@ export default function Home() {
         </div>
       </div>
       <div className='bg-[#e0191a]'>
-        <h1 className="text-[2.7rem] text-[#FFFFFF] font-bold mx-[7rem]">Recipes For Your Soul</h1>
+        <h1 className="text-[2.7rem] text-[#FFFFFF] font-bold mx-[10rem]">Recipes For Your Soul</h1>
         <SwiperS />
       </div>
     </>

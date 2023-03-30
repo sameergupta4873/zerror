@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Londrina+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Londrina+Shadow&family=Merienda:wght@800&display=swap');
 html,
 body {
   padding: 0;
@@ -17,6 +17,10 @@ a {
 
 .font{
   font-family: 'Londrina Shadow', cursive;
+}
+
+.title{
+  font-family: 'Merienda', cursive;
 }
 
 

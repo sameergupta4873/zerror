@@ -50,7 +50,8 @@ const Hero = () => {
                     { x: '4.5rem', y: '7rem' },
                     { x: '6rem', y: '11rem' },
                     { x: '6.5rem', y: '15rem' },
-                    { x: '6.25rem', y: '19rem' }]
+                    { x: '6.25rem', y: '19rem' },
+                    { x: '5rem', y: '24rem' }]
                 }
             },
         );
@@ -65,7 +66,7 @@ const Hero = () => {
                     { x: '0rem', y: '11rem' },
                     { x: '-0.75rem', y: '18rem' },
                     { x: '-2.75rem', y: '25rem' },
-                    { x: '-8.5rem', y: '31.5rem' }]
+                    { x: '-6.5rem', y: '31.5rem' }]
                 }
             },
         );
@@ -202,22 +203,22 @@ const Hero = () => {
 
 
                 <div className={`inline-block w-[55rem] absolute mt-[-17rem] ml-[17rem]`} ref={heading2}>
-                    <p className='text-[#EBFE00] text-[5rem] tracking-[-0.4rem]'>AADESH MASALE</p>
-                    <p className="text-[1.5rem] text-white">An amazing range of spices, healthy and nutritious</p>
+                    <p className='text-[#EBFE00] title text-[5rem]'>AADESH MASALE</p>
+                    <p className="text-[1.5rem] text-gray-200">An amazing range of spices, healthy and nutritious</p>
                     <Link href="/products">
-                        <button className='px-10 my-2 py-2 border-4 border-[#EBFE00] rounded-[3rem] text-2xl text-[#EBFE00] hover:text-[#e0191a] hover:bg-[#EBFE00] hover:border-[#e0191a]'>
+                        <button className='px-10 my-5 py-2 border-4 border-[#EBFE00] rounded-[3rem] text-2xl text-[#EBFE00] hover:text-[#e0191a] hover:bg-[#EBFE00] hover:border-[#e0191a]'>
                             Products
                         </button>
                     </Link>
                 </div>
 
-                <div className='absolute top-[-10rem] left-[59rem] -rotate-12' ref={move}>
+                <div className='absolute top-[-10rem] left-[70%] -rotate-12' ref={move}>
                     <img alt="Aadesh Masala Logo" src="/products/ChikenMasala.png" className='h-[20rem] w-[19rem]' ref={img} />
                 </div>
-                <div className='absolute top-[1.5rem] left-[49.75rem] -rotate-6' ref={move2}>
+                <div className='absolute top-[1.5rem] left-[50%] -rotate-6' ref={move2}>
                     <img alt="Aadesh Masala Logo" src="/products/ChanaBesan.png" className='h-[20rem] w-[19rem]' />
                 </div>
-                <div className='absolute top-[22rem] left-[30rem]' ref={move3}>
+                <div className='absolute top-[22rem] left-[30%]' ref={move3}>
                     <img alt="Aadesh Masala Logo" src="/products/JaljeeraMasala.png" className='h-[20rem] w-[19rem] origin-center' />
                 </div>
             </>
@@ -225,7 +226,7 @@ const Hero = () => {
             </div>
             <div className='fixed z-30 top-[13rem] left-[-20rem] '>
                 <Link href='/'>
-                    <p className="text-white relative hover:text-[#e0191a] group transition-all delay-10 duration-200 ease-linear text-[4rem] scale-y-[120%] h-[5rem] w-[12rem]" ref={list}>
+                    <p className="text-white title relative hover:text-[#e0191a] group transition-all delay-10 duration-200 ease-linear text-[4rem] scale-y-[120%] px-3 h-[5rem] w-[13rem]" ref={list}>
                         <span>Home</span>
                         <span className="absolute left-0 -bottom-1 w-full h-0 bg-[#EBFE00] duration-200 delay-75 -z-10 group-hover:h-full group-hover:transition-all"></span>
                     </p>
@@ -235,7 +236,7 @@ const Hero = () => {
             </div>
             <div className='fixed z-30 top-[21rem] left-[-20rem]'>
                 <Link href='/products'>
-                    <p className="text-white relative hover:text-[#e0191a] group transition-all delay-10 duration-200 ease-linear text-[4rem] scale-y-[120%] h-[5rem] w-[17rem]" ref={list2}>
+                    <p className="text-white title relative hover:text-[#e0191a] group transition-all delay-10 duration-200 ease-linear text-[4rem] scale-y-[120%] h-[5rem] px-3 w-[20rem]" ref={list2}>
                         <span>Products</span>
                         <span className="absolute left-0 -bottom-1 w-full h-0 bg-[#EBFE00] duration-200 delay-75 -z-10 group-hover:h-full group-hover:transition-all"></span>
                     </p>
@@ -245,7 +246,7 @@ const Hero = () => {
             </div>
             <div className='fixed z-30 top-[29rem] left-[-20rem]'>
                 <Link href='/about'>
-                    <p className="text-white relative hover:text-[#e0191a] group transition-all delay-10 duration-200 ease-linear text-[4rem] scale-y-[120%] h-[5rem] w-[18rem]" ref={list3}>
+                    <p className="text-white title relative hover:text-[#e0191a] group transition-all delay-10 duration-200 ease-linear text-[4rem] scale-y-[120%] h-[5rem] px-3 w-[20rem]" ref={list3}>
                         <span>About Us</span>
                         <span className="absolute left-0 -bottom-1 w-full h-0 bg-[#EBFE00] duration-200 delay-75 -z-10 group-hover:h-full group-hover:transition-all"></span>
                     </p>
