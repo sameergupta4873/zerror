@@ -103,7 +103,7 @@ export default function Home() {
         </div>
       </div>
       <div className='bg-[#e0191a]'>
-        <h1 className="text-[2.7rem] text-[#FFFFFF] font-bold mx-[7rem] py-[3rem]">Recipes For Your Soul</h1>
+        <h1 className="text-[2.7rem] text-[#FFFFFF] font-bold mx-[7rem]">Recipes For Your Soul</h1>
         <SwiperS />
       </div>
     </>

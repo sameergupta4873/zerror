@@ -1,73 +1,138 @@
-import React from 'react'
-import { Swiper, SwiperSlide } from "swiper/react";
+import { useState, useRef, useEffect } from 'react';
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { Pagination, Navigation } from "swiper";
+// Data
+import data from '../../data/data.json';
 
-const SwiperS = () => {
-    return (
-        <div className='px-20 ml-10 pb-28'>
-            <Swiper
-                slidesPerView={3}
-                spaceBetween={20}
-                loop={true}
-                modules={[Pagination, Navigation]}
+const Carousel = () => {
+  const maxScrollWidth = useRef(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const carousel = useRef(null);
+
+  const movePrev = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex((prevState) => prevState - 1);
+    }
+  };
+
+  const moveNext = () => {
+    if (
+      carousel.current !== null &&
+      carousel.current.offsetWidth * currentIndex <= maxScrollWidth.current
+    ) {
+      setCurrentIndex((prevState) => prevState + 1);
+    }
+  };
+
+  const isDisabled = (direction) => {
+    if (direction === 'prev') {
+      return currentIndex <= 0;
+    }
+
+    if (direction === 'next' && carousel.current !== null) {
+      return (
+        carousel.current.offsetWidth * currentIndex >= maxScrollWidth.current
+      );
+    }
+
+    return false;
+  };
+
+  useEffect(() => {
+    if (carousel !== null && carousel.current !== null) {
+      carousel.current.scrollLeft = carousel.current.offsetWidth * currentIndex;
+    }
+  }, [currentIndex]);
+
+  useEffect(() => {
+    maxScrollWidth.current = carousel.current
+      ? carousel.current.scrollWidth - carousel.current.offsetWidth
+      : 0;
+  }, []);
+
+  return (
+    <div className="carousel mx-auto px-24">
+        <button
+            onClick={movePrev}
+            className="hover:bg-gray-100/75 ml-[90%] border-4 rounded-full text-white w-[3rem] h-[3rem] text-center disabled:opacity-25 disabled:cursor-not-allowed z-40 p-0 m-0 transition-all ease-in-out duration-300"
+            disabled={isDisabled('prev')}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-9 w-20 -ml-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={3}
             >
-                <SwiperSlide className=''>
-                    <img alt="image" className="h-[404px] w-[404px] rounded-[7px]"
-                        src="https://www.everestfoods.com/wp-content/uploads/2021/11/Watermelon-Tomato-Jaljira-Juice-min-1920x1280-1.jpg" />
-                    <div className="slider-heading-2">
-                        <p className="text-[2rem] mt-[1rem] text-[#FFFFFF] ml-[0.5rem] w-[22rem] p-[0.25rem]">Watermelon Tomato Jaljira Juice</p>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img alt="image" className="h-[404px] w-[404px] rounded-[7px]"
-                        src="https://www.everestfoods.com/wp-content/uploads/2021/11/Grapes-Jaljira-Juice-min-1920x1367-1.jpg"  />
-                    <div className="slider-heading-2">
-                        <p className="text-[2rem] mt-[1rem] text-[#FFFFFF]  ml-[0.5rem] w-[22rem] p-[0.25rem]">Grapes Jaljira Juice</p>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img alt="image" className="h-[404px] w-[404px] rounded-[7px]"
-                        src="https://www.everestfoods.com/wp-content/uploads/2021/11/Pineapple-Jaljira-Drink-min-1920x2400-1.jpg" />
-                    <div className="slider-heading-2">
-                        <p className="text-[2rem] mt-[1rem] text-[#FFFFFF]  ml-[0.5rem] w-[22rem] p-[0.25rem]">Pineapple Jaljira Drink</p>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img alt="image" className="h-[404px] w-[404px] rounded-[7px]"
-                        src="https://www.everestfoods.com/wp-content/uploads/2021/11/Rajma-Masala-min-1920x1281-1.jpg" />
-                    <div className="slider-heading-2">
-                        <p className="text-[2rem] mt-[1rem] text-[#FFFFFF]  ml-[0.5rem] w-[22rem] p-[0.25rem]">Rajma Masala</p>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img alt="image" className="h-[404px] w-[404px] rounded-[7px]"
-                        src="https://www.everestfoods.com/wp-content/uploads/2021/11/Shahi-Paneer-Masala-1920x1280-1.jpg" />
-                    <div className="slider-heading-2">
-                        <p className="text-[2rem] mt-[1rem] text-[#FFFFFF]  ml-[0.5rem] w-[22rem] p-[0.25rem]">Shahi Paneer Masala</p>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img alt="image" className="h-[404px] w-[404px] rounded-[7px]"
-                        src="https://www.everestfoods.com/wp-content/uploads/2021/11/Sambhar-min-1920x1282-1.jpg" />
-                    <div className="slider-heading-2">
-                        <p className="text-[2rem] mt-[1rem] text-[#FFFFFF]  ml-[0.5rem] w-[22rem] p-[0.25rem]">Sambhar</p>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img alt="image" className="h-[404px] w-[404px] rounded-[7px]"
-                        src="https://www.everestfoods.com/wp-content/uploads/2021/11/shutterstock_1789219364-min-1920x1281-1.jpg" />
-                    <div className="slider-heading-2">
-                        <p className="text-[2rem] mt-[1rem] text-[#FFFFFF]  ml-[0.5rem] w-[22rem] p-[0.25rem]">Aloo Gobhi Sabzi</p>
-                    </div>
-                </SwiperSlide>
-            </Swiper>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15 19l-7-7 7-7"
+              />
+            </svg>
+            <span className="sr-only">Prev</span>
+          </button>
+          <button
+            onClick={moveNext}
+            className="hover:bg-gray-100/75 ml-6 border-4 rounded-full text-white w-[3rem] h-[3rem] text-center disabled:opacity-25 disabled:cursor-not-allowed z-40 p-0 m-0 transition-all ease-in-out duration-300"
+            disabled={isDisabled('next')}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-9 w-20 -ml-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={3}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+            <span className="sr-only">Next</span>
+          </button>
+      <div className="relative overflow-hidden mt-2">
+        
+        <div className="flex justify-between absolute top left w-full h-full">
         </div>
-    )
-}
+        <div
+          ref={carousel}
+          className="carousel-container relative flex gap-1 overflow-hidden scroll-smooth snap-x snap-mandatory touch-pan-x z-0"
+        >
+          {data.resources.map((resource, index) => {
+            return (
+              <div
+                key={index}
+                className="carousel-item text-center relative w-[20rem] h-[30rem] transition-all duration-500 hover:w-[30rem] snap-start"
+              >
+                <a
+                  href={resource.link}
+                  className="h-full w-full aspect-square block bg-origin-padding bg-left-top bg-cover bg-no-repeat z-0"
+                  style={{ backgroundImage: `url(${resource.imageUrl || ''})` }}
+                >
+                  <img
+                    src={resource.imageUrl || ''}
+                    alt={resource.title}
+                    className="w-full aspect-square hidden"
+                  />
+                </a>
+                <a
+                  href={resource.link}
+                  className="h-full w-full aspect-square block absolute top-0 left-0 transition-opacity duration-300 opacity-0 z-10"
+                >
+                  <h3 className="text-white py-6 px-3 mx-auto text-xl">
+                    {resource.title}
+                  </h3>
+                </a>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default SwiperS
+export default Carousel;
