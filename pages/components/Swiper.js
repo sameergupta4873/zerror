@@ -54,7 +54,7 @@ const Carousel = () => {
             <div className='flex justify-end'>
                 <button
                     onClick={movePrev}
-                    className="hover:bg-white hover:text-[#e0191a] border-[0.2rem] rounded-full text-white w-[4rem] h-[4rem] text-center disabled:opacity-25 disabled:cursor-not-allowed z-40 p-0 m-0 transition-all ease-in-out duration-300"
+                    className="hover:bg-white hover:text-[#e0191a] border-[0.2rem] rounded-full text-white w-[4rem] h-[4rem] text-center disabled:opacity-25 disabled:cursor-not-allowed z-20 p-0 m-0 transition-all ease-in-out duration-300"
                     disabled={isDisabled('prev')}
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-10 h-8 ml-2">
@@ -64,7 +64,7 @@ const Carousel = () => {
                 </button>
                 <button
                     onClick={moveNext}
-                    className="hover:bg-white hover:text-[#e0191a] ml-6 border-[0.2rem] rounded-full text-white w-[4rem] h-[4rem] text-center disabled:opacity-25 disabled:cursor-not-allowed z-40 p-0 m-0 transition-all ease-in-out duration-300"
+                    className="hover:bg-white hover:text-[#e0191a] ml-6 border-[0.2rem] rounded-full text-white w-[4rem] h-[4rem] text-center disabled:opacity-25 disabled:cursor-not-allowed z-20 p-0 m-0 transition-all ease-in-out duration-300"
                     disabled={isDisabled('next')}
                 >
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-10 h-8 ml-2">
