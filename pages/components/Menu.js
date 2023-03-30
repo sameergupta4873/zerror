@@ -98,35 +98,45 @@ const Menu = () => {
                 <Hamburger color='white' size={30} rounded toggled={rotate} toggle={setrotate} onToggle={handleAnimation} />
             </button>
             <div className={`bg-[#e0191a] z-30 fixed h-[61rem] w-[120rem] left-[-120rem]`} ref={banner}></div>
-            <div className='fixed z-40 bg-[#e0191a] w-[5rem] h-[6rem] top-[13rem]'>
+            <div className='fixed z-40 bg-[#e0191a] w-[5rem] h-[6rem] top-[10rem]'>
             </div>
-            <div className='fixed z-30 top-[13rem] left-[-20rem] '>
+            <div className='fixed z-30 top-[10rem] left-[-20rem] '>
                 <Link href='/'>
-                    <p className="text-white title relative hover:text-[#e0191a] group transition-all delay-10 duration-200 ease-linear text-[4rem] scale-y-[120%] px-3 h-[5rem] w-[13rem]" ref={list}>
+                    <p className="text-white title relative hover:text-[#e0191a] group transition-all delay-10 duration-200 ease-linear text-[3rem] scale-y-[120%] px-3 h-[5rem] w-[13rem]" ref={list}>
                         <span>Home</span>
                         <span className="absolute left-0 -bottom-1 w-full h-0 bg-[#EBFE00] duration-200 delay-75 -z-10 group-hover:h-full group-hover:transition-all"></span>
                     </p>
                 </Link>
             </div>
+            <div className='fixed z-40 bg-[#e0191a] w-[5rem] h-[6rem] top-[13rem]'>
+            </div>
+            <div className='fixed z-30 top-[13rem] left-[-20rem] '>
+                <a href='/'>
+                    <p className="text-white title relative hover:text-[#e0191a] group transition-all delay-10 duration-200 ease-linear text-[3rem] scale-y-[120%] px-3 h-[5rem] w-[13rem]" ref={list}>
+                        <span>Home</span>
+                        <span className="absolute left-0 -bottom-1 w-full h-0 bg-[#EBFE00] duration-200 delay-75 -z-10 group-hover:h-full group-hover:transition-all"></span>
+                    </p>
+                </a>
+            </div>
             <div className='fixed z-40 bg-[#e0191a] w-[5rem] h-[6rem] top-[20rem]'>
             </div>
             <div className='fixed z-30 top-[21rem] left-[-20rem]'>
-                <Link href='/products'>
-                    <p className="text-white title relative hover:text-[#e0191a] group transition-all delay-10 duration-200 ease-linear text-[4rem] scale-y-[120%] h-[5rem] px-3 w-[20rem]" ref={list2}>
+                <a href='/products'>
+                    <p className="text-white title relative hover:text-[#e0191a] group transition-all delay-10 duration-200 ease-linear text-[3rem] scale-y-[120%] h-[5rem] px-3 w-[20rem]" ref={list2}>
                         <span>Products</span>
                         <span className="absolute left-0 -bottom-1 w-full h-0 bg-[#EBFE00] duration-200 delay-75 -z-10 group-hover:h-full group-hover:transition-all"></span>
                     </p>
-                </Link>
+                </a>
             </div>
             <div className='fixed z-40 bg-[#e0191a] w-[5rem] h-[6rem] top-[28rem]'>
             </div>
             <div className='fixed z-30 top-[29rem] left-[-20rem]'>
-                <Link href='/about'>
-                    <p className="text-white title relative hover:text-[#e0191a] group transition-all delay-10 duration-200 ease-linear text-[4rem] scale-y-[120%] h-[5rem] px-3 w-[20rem]" ref={list3}>
+                <a href='/about'>
+                    <p className="text-white title relative hover:text-[#e0191a] group transition-all delay-10 duration-200 ease-linear text-[3rem] scale-y-[120%] h-[5rem] px-3 w-[20rem]" ref={list3}>
                         <span>About Us</span>
                         <span className="absolute left-0 -bottom-1 w-full h-0 bg-[#EBFE00] duration-200 delay-75 -z-10 group-hover:h-full group-hover:transition-all"></span>
                     </p>
-                </Link>
+                </a>
             </div>
             <div className='fixed z-40 bg-[#e0191a] w-[5rem] h-[3rem] top-[39rem]'>
             </div>
@@ -150,13 +160,13 @@ const Menu = () => {
                     </p>
                 </Link>
             </div>
-            <div className={!rotate ? 'fixed z-[-10] top-[30rem] left-[55rem]' : 'fixed z-40 top-[30rem] left-[55rem]'} ref={show}>
+            <div className={!rotate ? 'fixed z-[-10] top-[65%] left-[57%]' : 'fixed z-40 top-[65%] left-[57%]'} ref={show}>
                 <img alt="Aadesh Masala Logo" src="/products/ChikenMasala.png" className='h-[14rem] w-[13rem] -rotate-3' ref={cnt} />
             </div>
-            <div className={!rotate ? 'fixed z-[-10] top-[9rem] left-[50rem]' : 'fixed z-40 top-[9rem] left-[45rem]'} ref={show2}>
+            <div className={!rotate ? 'fixed z-[-10] top-[15%] left-[40%]' : 'fixed z-40 top-[15%] left-[40%]'} ref={show2}>
                 <img alt="Aadesh Masala Logo" src="/products/JaljeeraMasala.png" className='h-[14rem] w-[13rem] -rotate-12' ref={cnt2} />
             </div>
-            <div className={!rotate ? 'fixed z-[-10] top-[14rem] left-[75rem]' : 'fixed z-40 top-[14rem] left-[75rem]'} ref={show3}>
+            <div className={!rotate ? 'fixed z-[-10] top-[20%] left-[75%]' : 'fixed z-40 top-[20%] left-[75%]'} ref={show3}>
                 <img alt="Aadesh Masala Logo" src="/products/ChanaBesan.png" className='h-[14rem] w-[13rem] rotate-12' ref={cnt3} />
             </div>
         </div>

@@ -15,10 +15,10 @@ const Product = () => {
       <Menu />
       {id &&
         <>
-          <div className='w-full bg-[#e0191a] h-[6rem]'>
-            <h1 className='text-white absolute text-5xl font-bold top-[4rem] left-[11%] tracking-wider'>{products[id - 1].name}</h1>
+          <div className='w-[90%] bg-[#e0191a] h-[6rem] ml-[10rem]'>
+            <h1 className='text-white absolute text-5xl font-bold top-[4rem] left-[10rem] tracking-wider'>{products[id - 1].name}</h1>
           </div>
-          <section className="pt-12 pb-24 pl-12 bg-blueGray-100 rounded-b-10xl overflow-hidden">
+          <section className="pt-12 pb-24 pl-[9rem] bg-blueGray-100 rounded-b-10xl overflow-hidden">
             <div className="container px-4 mx-auto">
               <div className="flex flex-wrap -mx-4">
                 <div className="w-full px-4">
@@ -42,7 +42,7 @@ const Product = () => {
                     <li><Link className="text-md text-white font-bolder" href="#">{id ? products[id - 1].name : 'product'}</Link></li>
                   </ul>
                 </div>
-                <div className="w-full lg:w-1/2 px-4 mb-16 lg:mb-0">
+                <div className="w-[40%] px-4 mb-0">
                   <div className="flex -mx-4 flex-wrap items-center justify-between lg:justify-start lg:items-start xl:items-center">
                     {/* <div className="w-full sm:w-auto min-w-max px-4 text-center flex sm:flex-col items-center justify-center">
                       <Link className="inline-block sm:mb-12 mr-4 sm:mr-0 transform -rotate-90 sm:transform-none hover:text-darkBlueGray-400" href="#">
@@ -70,12 +70,12 @@ const Product = () => {
                     </div> */}
                     <div style={{
                       backgroundColor: `${products[id - 1].bg}`
-                    }} className="w-full sm:w-9/12 rounded-3xl px-10 py-20 border">
+                    }} className="w-[80%] rounded-3xl px-10 py-20 border">
                       <img className="" src={'/' + products[id - 1].imageSrc} alt="" />
                     </div>
                   </div>
                 </div>
-                <div className="w-full lg:w-1/2 px-4">
+                <div className="w-[50%] px-4">
                   <div className="mb-6 pb-5 border-b-2">
                     <h2 className="text-6xl mb-7 text-white font-extrabold font-heading">Ingredients</h2>
                     <p className="text-2xl text-gray-200">It is a blend of a wide range of spices, like {products[id - 1].ingredients}.</p>

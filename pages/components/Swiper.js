@@ -51,26 +51,28 @@ const Carousel = () => {
 
     return (
         <div className="carousel mx-auto px-36 ml-12">
-            <button
-                onClick={movePrev}
-                className="hover:bg-white ml-[90%] hover:text-[#e0191a] border-[0.2rem] rounded-full text-white w-[4rem] h-[4rem] text-center disabled:opacity-25 disabled:cursor-not-allowed z-40 p-0 m-0 transition-all ease-in-out duration-300"
-                disabled={isDisabled('prev')}
-            >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-10 h-8 ml-2">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" />
-                </svg>
-                <span className="sr-only">Prev</span>
-            </button>
-            <button
-                onClick={moveNext}
-                className="hover:bg-white hover:text-[#e0191a] ml-6 border-[0.2rem] rounded-full text-white w-[4rem] h-[4rem] text-center disabled:opacity-25 disabled:cursor-not-allowed z-40 p-0 m-0 transition-all ease-in-out duration-300"
-                disabled={isDisabled('next')}
-            >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-10 h-8 ml-2">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                </svg>
-                <span className="sr-only">Next</span>
-            </button>
+            <div className='flex justify-end'>
+                <button
+                    onClick={movePrev}
+                    className="hover:bg-white hover:text-[#e0191a] border-[0.2rem] rounded-full text-white w-[4rem] h-[4rem] text-center disabled:opacity-25 disabled:cursor-not-allowed z-40 p-0 m-0 transition-all ease-in-out duration-300"
+                    disabled={isDisabled('prev')}
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-10 h-8 ml-2">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" />
+                    </svg>
+                    <span className="sr-only">Prev</span>
+                </button>
+                <button
+                    onClick={moveNext}
+                    className="hover:bg-white hover:text-[#e0191a] ml-6 border-[0.2rem] rounded-full text-white w-[4rem] h-[4rem] text-center disabled:opacity-25 disabled:cursor-not-allowed z-40 p-0 m-0 transition-all ease-in-out duration-300"
+                    disabled={isDisabled('next')}
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-10 h-8 ml-2">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                    </svg>
+                    <span className="sr-only">Next</span>
+                </button>
+            </div>
             <div className="relative overflow-hidden mt-5">
 
                 <div className="flex justify-between absolute top left w-full h-full">

@@ -53,8 +53,8 @@ const about = () => {
                                 </p>
                                 <img src="/about3.jpeg" className='w-[25%] h-[22rem] ml-10 rounded-lg'></img>
                             </div>
-                            <p className='title ml-[74%]'>- Mr. Mahesh Kumar Soni </p>
-                            <p className='title ml-[76%]'>MD, Aadesh Masale</p>
+                            <p className='title ml-[50%] mt-[2%]'>- Mr. Mahesh Kumar Soni </p>
+                            <p className='title ml-[53%]  mt-[1%]'>MD, Aadesh Masale</p>
                         </div>
                         <div>
                             <h2 className="mt-20 mb-10 title text-3xl text-center tracking-tight font-extrabold text-white">Mission</h2>

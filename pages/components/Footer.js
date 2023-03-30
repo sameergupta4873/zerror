@@ -10,12 +10,12 @@ const Footer = () => {
   };
   return (
     <div className='bg-[#e0191a] pt-[9rem] border border-[#e0191a]'>
-      <nav className="px-2 w-full bg-[#e0191a]">
+      <nav className="pr-32 w-full bg-[#e0191a]">
         <div className='flex'>
-          <Link href="/" className="my-[3.25rem] ml-[7rem]">
-            <img alt="image" src="/Aadesh English Logo.png" className="" height={200} width={175} />
+          <Link href="/" className="my-[3.25rem] w-[13%] ml-[10%]">
+            <img alt="image" src="/Aadesh English Logo.png" className="h-[100%] w-[100%]" />
           </Link>
-          <div className="flex ml-[40%]">
+          <div className="flex ml-[30%] w-[50%]">
             <div className="block w-auto" id="navbar-dropdown">
               <ul className="flex flex-col p-4 mt-4">
                 <li>
@@ -32,7 +32,7 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            <div className="block w-auto ml-[10rem]" id="navbar-dropdown">
+            <div className="block w-[50%] ml-[10rem]" id="navbar-dropdown">
               <ul className="flex flex-col p-4 mt-4">
                 <li>
                   <div className="block title text-white font-bold text-2xl rounded bg-transparent my-4 " aria-current="page">Company</div>

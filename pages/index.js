@@ -59,55 +59,95 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="w-full ml-10 flex px-5 items-center justify-center">
-          <Link className={`h-30 block mb-4 mr-10 ml-5 pt-20 pb-9 px-16 rounded-[25px]`} href={products[index].href} style={{ backgroundColor: products[index].bg }}>
-            <img className="h-[50%] w-[15rem] transition duration-500 hover:scale-110" src={'/' + products[index].imageSrc} alt="" />
-            <p className='text-xl font-extrabold mt-6'>{products[index].name}</p>
-            <div className='mt-4 flex'>
-              <p className='text-xl font-extrabold'>{products[index].price}</p>
-              <Link href={`/product/${products[index].id}`} className='px-4 py-1 pt-2 ml-[50%] flex bg-[#e0191a] rounded-full text-[#FFFFFF] border-2 border-transparent'>
+        <div className="w-[90%] ml-[7%] flex px-5 items-center justify-between">
+          <Link key={products[index].id} className={`h-30 block mb-4 mr-5 pt-16 p-5 rounded-[25px]`} href={products[index].href} style={{ backgroundColor: products[index].bg }}>
+            <img className="h-[15rem] w-[13rem] mx-[auto] transition duration-500 hover:scale-110" src={'/' + products[index].imageSrc} alt="" />
+            <p className='text-md flex justify-between font-extrabold mt-6'>{products[index].name}    <span className='mr-3'>{products[index].size[0]}g{products[index].size[1] && ','} {products[index].size[1]}{products[index].size[1] && 'g'}</span></p>
+            <div className='mt-4 flex justify-between w-[16rem]'>
+              <p className='text-md flex font-extrabold'>
+                <p className='mr-1'>
+                  {products[index].price[0]}
+                </p>
+                <p>
+                  {products[index].price[1] && '|'}
+                </p>
+                <p className='ml-1'>
+                  {products[index].price[1]}
+                </p>
+              </p>
+              <Link href={`/product/${products[index].id}`} className='px-3 py-1 pt-1 flex text-sm bg-[#e0191a] rounded-full text-[#FFFFFF] hover:bg-transparent hover:text-[#e0191a] border-2 border-transparent hover:border-[#e0191a]'>
                 Details
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" className="w-5 h-5 ml-2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-4 h-3 my-[3px]">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                 </svg>
               </Link>
             </div>
           </Link>
-          <Link className={`h-30 block mb-4 mr-5 pt-20 pb-9 px-16 rounded-[25px]`} href={products[index + 1].href} style={{ backgroundColor: products[index + 1].bg }}>
-            <img className="h-[50%] w-[15rem] transition duration-500 hover:scale-110" src={'/' + products[index + 1].imageSrc} alt="" />
-            <p className='text-xl font-extrabold mt-6'>{products[index + 1].name}</p>
-            <div className='mt-4 flex'>
-              <p className='text-xl font-extrabold'>{products[index + 1].price}</p>
-              <Link href={`/product/${products[index + 1].id}`} className='px-4 py-1 pt-2 ml-[50%] flex bg-[#e0191a] rounded-full text-[#FFFFFF] border-2 border-transparent'>
+          <Link key={products[index + 1].id} className={`h-30 block mb-4 mr-5 pt-16 p-5 rounded-[25px]`} href={products[index + 1].href} style={{ backgroundColor: products[index + 1].bg }}>
+            <img className="h-[15rem] w-[13rem] mx-[auto] transition duration-500 hover:scale-110" src={'/' + products[index + 1].imageSrc} alt="" />
+            <p className='text-md flex justify-between font-extrabold mt-6'>{products[index + 1].name}    <span className='mr-3'>{products[index + 1].size[0]}g{products[index + 1].size[1] && ','} {products[index + 1].size[1]}{products[index + 1].size[1] && 'g'}</span></p>
+            <div className='mt-4 flex justify-between w-[16rem]'>
+              <p className='text-md flex font-extrabold'>
+                <p className='mr-1'>
+                  {products[index + 1].price[0]}
+                </p>
+                <p>
+                  {products[index + 1].price[1] && '|'}
+                </p>
+                <p className='ml-1'>
+                  {products[index + 1].price[1]}
+                </p>
+              </p>
+              <Link href={`/product/${products[index+1].id}`} className='px-3 py-1 pt-1 flex text-sm bg-[#e0191a] rounded-full text-[#FFFFFF] hover:bg-transparent hover:text-[#e0191a] border-2 border-transparent hover:border-[#e0191a]'>
                 Details
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" className="w-5 h-5 ml-2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-4 h-3 my-[3px]">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                 </svg>
               </Link>
             </div>
           </Link>
-          <Link className={`h-30 block mb-4 mr-10 ml-5 pt-20 pb-9 px-16 rounded-[25px]`} href={products[index+2].href} style={{ backgroundColor: products[index + 2].bg }}>
-            <img className="h-[50%] w-[15rem] transition duration-500 hover:scale-110" src={'/' + products[index + 2].imageSrc} alt="" />
-            <p className='text-xl font-extrabold mt-6'>{products[index + 2].name}</p>
-            <div className='mt-4 flex'>
-              <p className='text-xl font-extrabold'>{products[index + 2].price}</p>
-              <Link href={`/product/${products[index + 2].id}`} className='px-4 py-1 pt-2 ml-[50%] flex bg-[#e0191a] rounded-full text-[#FFFFFF] border-2 border-transparent'>
+          <Link key={products[index + 2].id} className={`h-30 block mb-4 mr-5 pt-16 p-5 rounded-[25px]`} href={products[index + 2].href} style={{ backgroundColor: products[index + 2].bg }}>
+            <img className="h-[15rem] w-[13rem] mx-[auto] transition duration-500 hover:scale-110" src={'/' + products[index + 2].imageSrc} alt="" />
+            <p className='text-md flex justify-between font-extrabold mt-6'>{products[index + 2].name}    <span className='mr-3'>{products[index + 2].size[0]}g{products[index + 2].size[1] && ','} {products[index + 2].size[1]}{products[index + 2].size[1] && 'g'}</span></p>
+            <div className='mt-4 flex justify-between w-[16rem]'>
+              <p className='text-md flex font-extrabold'>
+                <p className='mr-1'>
+                  {products[index + 2].price[0]}
+                </p>
+                <p>
+                  {products[index + 2].price[1] && '|'}
+                </p>
+                <p className='ml-1'>
+                  {products[index + 2].price[1]}
+                </p>
+              </p>
+              <Link href={`/product/${products[index+2].id}`} className='px-3 py-1 pt-1 flex text-sm bg-[#e0191a] rounded-full text-[#FFFFFF] hover:bg-transparent hover:text-[#e0191a] border-2 border-transparent hover:border-[#e0191a]'>
                 Details
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" className="w-5 h-5 ml-2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-4 h-3 my-[3px]">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                 </svg>
               </Link>
             </div>
           </Link>
-          <Link className={`h-30 block mb-4 mr-10 pt-20 pb-9 px-16 rounded-[25px]`} href={products[index+3].href} style={{ backgroundColor: products[index + 3].bg }}>
-            <img className="h-[50%] w-[15rem] transition duration-500 hover:scale-110" src={'/' + products[index + 3].imageSrc} alt="" />
-            <p className='text-xl font-extrabold mt-6'>{products[index + 3].name}</p>
-            <div className='mt-4 flex'>
-              <p className='text-xl font-extrabold'>{products[index + 3].price}</p>
-              <Link href={`/product/${products[index + 3].id}`} className='px-4 py-1 pt-2 ml-[50%] flex bg-[#e0191a] rounded-full text-[#FFFFFF] border-2 border-transparent'>
+          <Link key={products[index + 3].id} className={`h-30 block mb-4 mr-5 pt-16 p-5 rounded-[25px]`} href={products[index + 3].href} style={{ backgroundColor: products[index + 3].bg }}>
+            <img className="h-[15rem] w-[13rem] mx-[auto] transition duration-500 hover:scale-110" src={'/' + products[index + 3].imageSrc} alt="" />
+            <p className='text-md flex justify-between font-extrabold mt-6'>{products[index + 3].name}    <span className='mr-3'>{products[index + 3].size[0]}g{products[index + 3].size[1] && ','} {products[index + 3].size[1]}{products[index].size[1] && 'g'}</span></p>
+            <div className='mt-4 flex justify-between w-[16rem]'>
+              <p className='text-md flex font-extrabold'>
+                <p className='mr-1'>
+                  {products[index + 3].price[0]}
+                </p>
+                <p>
+                  {products[index + 3].price[1] && '|'}
+                </p>
+                <p className='ml-1'>
+                  {products[index + 3].price[1]}
+                </p>
+              </p>
+              <Link href={`/product/${products[index+3].id}`} className='px-3 group py-1 pt-1 flex text-sm bg-[#e0191a] rounded-full text-[#FFFFFF] hover:bg-transparent hover:text-[#e0191a] border-2 border-transparent hover:border-[#e0191a]'>
                 Details
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" className="w-5 h-5 ml-2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12.75 15l3-3m0 0l-3-3m3 3h-7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor" className="w-4 h-3 my-[3px]">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                 </svg>
               </Link>
             </div>
