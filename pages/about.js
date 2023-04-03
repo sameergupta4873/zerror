@@ -7,13 +7,13 @@ const about = () => {
 
     return (
         <div>
-            <Menu />
-            <section className="bg-[#e0191a] pl-20">
-                <div className="gap-16 items-center py-8 px-20 w-[90%]">
+            <Menu/>
+            <section className="bg-[#e0191a] px-20 max-lg:px-8 max-md:px-4">
+                <div className="gap-16 items-center py-8 px-20 w-[100%] max-sm:px-7">
                     <div className="font-light text-gray-100 sm:text-lg">
-                        <h2 className="mb-20 title text-5xl tracking-tight font-extrabold text-white">Aadesh Masale</h2>
-                        <div className='flex justify-between'>
-                            <p className="mb-4 w-[65%]">Aadesh Masale Approved by AGMARK & ISO, HACCP Established in the year 2005, at Jungle Ramnagar, Raipur Fulwari, Amethi, District Amethi in India, We “MAHESH GRIH UDYOG”, is engaged in manufacturing and supplying Nutritious and Quality Food products.
+                        <h2 className="mb-20 title text-5xl tracking-tight font-extrabold text-white max-lg:text-4xl max-lg:mb-10 max-sm:text-2xl">Aadesh Masale</h2>
+                        <div className='flex justify-between max-md:flex-col'>
+                            <p className="mb-4 w-[65%] max-lg:text-sm max-lg:w-[75%] max-md:w-[115%] max-sm:w-full">Aadesh Masale Approved by AGMARK & ISO, HACCP Established in the year 2005, at Jungle Ramnagar, Raipur Fulwari, Amethi, District Amethi in India, We “MAHESH GRIH UDYOG”, is engaged in manufacturing and supplying Nutritious and Quality Food products.
                                 Our offered food product include SABUT GARAM-MASALA. Highly nutritious, our range is hygienically processed using advance technology to retain all its essential properties.
                                 We are backed by a diligent are experienced team of professionals that helps in offering highly nutritious, pure, fresh and appetite pleasing food products to our customers.
                                 <br />
@@ -23,14 +23,14 @@ const about = () => {
                                 <br />
                                 Our packaging personnel ensure that the food products are packed carefully using quality packaging material, so that their taste can we retained for a longer period of time.
                             </p>
-                            <img src="/about.jpg" className='h-[31rem] w-[21rem] rounded-lg ml-10'></img>
+                            <img src="/about.jpg" className='h-[31rem] w-[21rem] rounded-lg ml-10 max-lg:h-[31rem] max-lg:w-[15rem] max-md:w-[130%] max-md:ml-0 max-md:h-[75%] max-md:text-center'></img>
                         </div>
-                        <h2 className="mt-20 mb-10 title text-5xl tracking-tight font-extrabold text-white">Our Story</h2>
+                        <h2 className="mt-20 mb-10 title text-5xl tracking-tight font-extrabold text-white max-lg:text-3xl max-sm:text-2xl max-sm:mt-10 max-sm:mb-5">Our Story</h2>
                         <div className=''>
                             {/* <img src="/about2.jpg" className='h-[31rem] w-[21rem] rounded-lg mt-20'></img> */}
-                            <div className='flex'>
-                                <img src='/about2.jpg' className='w-[25%] h-[20rem] rounded-md mr-20'></img>
-                                <div className='w-[60%]'>
+                            <div className='flex max-md:flex-col'>
+                                <img src='/about2.jpg' className='w-[25%] h-[20rem] rounded-md mr-20 max-lg:mr-7 max-lg:h-[21rem] max-md:w-[100%] max-md:h-[65%]'></img>
+                                <div className='w-[60%] max-lg:text-base max-lg:w-[70%] max-md:w-[115%] max-md:mt-10 max-sm:w-full max-sm:text-sm'>
                                     Welcome to Aadesh Masala, an Indian spices brand that is dedicated to bringing the flavors of traditional Indian cuisine to every household in India. My name is Mahesh Kumar Soni and I am the founder of Aadesh Masala.
                                     <br />
                                     Our journey started in 2005, with a simple goal - to create job opportunities for our local citizens. As a passionate entrepreneur, I wanted to make a difference in my community and contribute to the growth of our nation&#39;s economy. With a strong desire to explore the traditional Indian spices, I established Aadesh Masala, a subsidiary of Mahesh Grih Udyog.
@@ -40,10 +40,9 @@ const about = () => {
                                 </div>
                             </div>
                             <br />
-                            <br />
-                            <div className='flex'>
+                            <div className='flex max-md:flex-col'>
 
-                                <p className='w-[70%]'>
+                                <p className='w-[70%] max-lg:text-base max-md:w-[115%] max-sm:w-full max-sm:text-sm'>
                                     Over the years, we have grown from a small local business to a national brand, serving customers across India. We take pride in our commitment to quality, sourcing the freshest and finest ingredients to make our spices. Our products are free from any harmful additives, ensuring that our customers can enjoy healthy and delicious meals.
                                     <br />
                                     Our team of experts is dedicated to creating unique blends of spices that capture the authentic taste of Indian cuisine. We believe that our spices are not just a product, but a representation of our culture and heritage. We take great care in every step of the production process, from sourcing to packaging, to ensure that our customers receive the best quality products.
@@ -51,24 +50,24 @@ const about = () => {
                                     <br />
                                     At Aadesh Masala, we are more than just a spice brand. We are a community of passionate individuals who are committed to promoting the flavors of India. We invite you to join us on this journey and experience the true taste of Indian spices. Thank you for choosing Aadesh Masala - where every spice tells a story.
                                 </p>
-                                <img src="/about3.jpeg" className='w-[25%] h-[22rem] ml-10 rounded-lg'></img>
+                                <img src="/about3.jpeg" className='w-[25%] h-[22rem] ml-10 rounded max-lg:h-[28rem] max-md:w-[115%] max-md:py-5 max-md:ml-0'></img>
                             </div>
-                            <p className='title ml-[50%] mt-[2%]'>- Mr. Mahesh Kumar Soni </p>
-                            <p className='title ml-[53%]  mt-[1%]'>MD, Aadesh Masale</p>
+                            <p className='title ml-[50%] mt-[2%] max-md:text-sm max-sm:ml-[35%] max-sm:text-sm'>- Mr. Mahesh Kumar Soni </p>
+                            <p className='title ml-[53%]  mt-[1%] max-md:text-sm max-sm:ml-[50%] max-sm:text-sm'>MD, Aadesh Masale</p>
                         </div>
                         <div>
-                            <h2 className="mt-20 mb-10 title text-3xl text-center tracking-tight font-extrabold text-white">Mission</h2>
+                            <h2 className="mt-20 mb-10 title text-3xl text-center tracking-tight font-extrabold text-white max-sm:mt-10 max-sm:mb-5">Mission</h2>
                             <div>
-                                <p>
+                                <p className="max-md:w-[115%] max-sm:w-full max-sm:text-sm">
                                     To be recognized as the company that has achieved &#39;Trinity of Excellence&#39; through practicing &#39;Right Perception&#39;, &#39;Right Thinking&#39;
                                     and &#39;Right Conduct&#39; for achieving Highest Quality, &#39;Value for Money&#39; and &#39;Outstanding Commitment&#39;.
                                 </p>
                             </div>
                         </div>
                         <div>
-                            <h2 className="mt-20 mb-10 title text-3xl text-center tracking-tight font-extrabold text-white">Vision</h2>
+                            <h2 className="mt-20 mb-10 title text-3xl text-center tracking-tight font-extrabold text-white max-sm:mt-10 max-sm:mb-5">Vision</h2>
                             <div>
-                                <p>
+                                <p className='max-md:w-[115%] max-sm:w-full max-sm:text-sm'>
                                     Developing new markets of our products Spices, Instant Mixes and Food Products - Product Wise, Region Wise and with standard hygienic manufacturing plant & operational process, professionally managed.
                                 </p>
                             </div>

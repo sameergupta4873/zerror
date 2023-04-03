@@ -77,12 +77,12 @@ const Menu = () => {
         } else {
             let tl = gsap.timeline();
 
-            tl.from([el11, el12, el13], {
-                duration: 0.5,
-                y: 500,
-                autoAlpha: -5,
-                ease: "Power2.out",
-            })
+                tl.from([el11, el12, el13], {
+                    duration: 0.5,
+                    y: 500,
+                    autoAlpha: -5,
+                    ease: "Power2.out",
+                })
             gsap.to(el6, { x: 2000, duration: 0.5 });
             gsap.to(el7, { x: 400, duration: 0.25 });
             gsap.to(el8, { x: 400, duration: 0.25 });
@@ -94,81 +94,72 @@ const Menu = () => {
 
     return (
         <div className='block bg-[#e0191a]' ref={track}>
-            <button className='fixed z-50 top-5 left-8 flex' onClick={() => setrotate(!rotate)}>
+            <button className='fixed z-50 top-5 left-8 flex max-md:left-4 max-md:top-4 max-sm:left-1 max-sm:top-1' onClick={() => setrotate(!rotate)}>
                 <Hamburger color='white' size={30} rounded toggled={rotate} toggle={setrotate} onToggle={handleAnimation} />
             </button>
-            <div className={`bg-[#e0191a] z-30 fixed h-[61rem] w-[120rem] left-[-120rem]`} ref={banner}></div>
-            <div className='fixed z-40 bg-[#e0191a] w-[5rem] h-[6rem] top-[10rem]'>
+            <div className={`bg-[#e0191a] z-30 fixed h-[100vh] w-[120rem] left-[-120rem] max-lg:left-[-130rem]`} ref={banner}></div>
+            <div className='fixed z-40 bg-[#e0191a] w-[5rem] h-[6rem] top-[28%] max-lg:w-[3rem] max-sm:w-[1rem]'>
             </div>
-            <div className='fixed z-30 top-[10rem] left-[-20rem] '>
+            <div className='fixed z-30 top-[28%] left-[-20rem] max-lg:left-[-23rem] max-sm:left-[-24.5rem]'>
                 <Link href='/'>
-                    <p className="text-white title relative hover:text-[#e0191a] group transition-all delay-10 duration-200 ease-linear text-[3rem] scale-y-[120%] px-3 h-[5rem] w-[13rem]" ref={list}>
+                    <p className="text-white title relative hover:text-[#e0191a] group transition-all delay-10 duration-200 ease-linear text-[3rem] scale-y-[120%] px-3 h-[100%] w-[105%] max-lg:text-[2.5rem] max-sm:text-[1.5rem]" ref={list}>
                         <span>Home</span>
                         <span className="absolute left-0 -bottom-1 w-full h-0 bg-[#EBFE00] duration-200 delay-75 -z-10 group-hover:h-full group-hover:transition-all"></span>
                     </p>
                 </Link>
             </div>
-            <div className='fixed z-40 bg-[#e0191a] w-[5rem] h-[6rem] top-[13rem]'>
+            <div className='fixed z-40 bg-[#e0191a] w-[5rem] h-[6rem] top-[50%] max-lg:w-[3rem] max-sm:w-[1rem]'>
             </div>
-            <div className='fixed z-30 top-[13rem] left-[-20rem] '>
-                <a href='/'>
-                    <p className="text-white title relative hover:text-[#e0191a] group transition-all delay-10 duration-200 ease-linear text-[3rem] scale-y-[120%] px-3 h-[5rem] w-[13rem]" ref={list}>
-                        <span>Home</span>
-                        <span className="absolute left-0 -bottom-1 w-full h-0 bg-[#EBFE00] duration-200 delay-75 -z-10 group-hover:h-full group-hover:transition-all"></span>
-                    </p>
-                </a>
-            </div>
-            <div className='fixed z-40 bg-[#e0191a] w-[5rem] h-[6rem] top-[20rem]'>
-            </div>
-            <div className='fixed z-30 top-[21rem] left-[-20rem]'>
-                <a href='/products'>
-                    <p className="text-white title relative hover:text-[#e0191a] group transition-all delay-10 duration-200 ease-linear text-[3rem] scale-y-[120%] h-[5rem] px-3 w-[20rem]" ref={list2}>
+            <div className='fixed z-30 top-[50%] left-[-20rem] max-lg:left-[-23rem] max-sm:left-[-24.5rem]'>
+                <Link href='/products'>
+                    <p className="text-white title relative hover:text-[#e0191a] group transition-all delay-10 duration-200 ease-linear text-[3rem] scale-y-[120%] h-[100%] px-3 w-[105%] max-lg:text-[2.5rem] max-sm:text-[1.5rem] " ref={list2}>
                         <span>Products</span>
                         <span className="absolute left-0 -bottom-1 w-full h-0 bg-[#EBFE00] duration-200 delay-75 -z-10 group-hover:h-full group-hover:transition-all"></span>
                     </p>
-                </a>
+                </Link>
             </div>
-            <div className='fixed z-40 bg-[#e0191a] w-[5rem] h-[6rem] top-[28rem]'>
+            <div className='fixed z-40 bg-[#e0191a] w-[5rem] h-[6rem] top-[70%] max-lg:w-[3rem] max-sm:w-[1rem]'>
             </div>
-            <div className='fixed z-30 top-[29rem] left-[-20rem]'>
-                <a href='/about'>
-                    <p className="text-white title relative hover:text-[#e0191a] group transition-all delay-10 duration-200 ease-linear text-[3rem] scale-y-[120%] h-[5rem] px-3 w-[20rem]" ref={list3}>
+            <div className='fixed z-30 top-[70%] left-[-20rem] max-lg:left-[-22.5rem] max-sm:left-[-24.5rem]'>
+                <Link href='/about'>
+                    <p className="text-white title relative hover:text-[#e0191a] group transition-all delay-10 duration-200 ease-linear text-[3rem] scale-y-[120%] h-[100%] px-3 w-[105%] max-lg:text-[2.5rem] max-sm:text-[1.5rem]" ref={list3}>
                         <span>About Us</span>
                         <span className="absolute left-0 -bottom-1 w-full h-0 bg-[#EBFE00] duration-200 delay-75 -z-10 group-hover:h-full group-hover:transition-all"></span>
                     </p>
-                </a>
+                </Link>
             </div>
-            <div className='fixed z-40 bg-[#e0191a] w-[5rem] h-[3rem] top-[39rem]'>
+            <div className='fixed z-40 bg-[#e0191a] w-[5rem] h-[3rem] top-[90%] max-lg:w-[3rem]'>
             </div>
-            <div className='fixed z-30 top-[39rem] h-[2rem] w-[20rem] left-[-20rem] flex' ref={list4}>
+            <div className='fixed z-30 top-[90%] h-[2rem] w-[20rem] left-[-20rem] flex max-lg:left-[-22rem]' ref={list4}>
                 <Link href="https://www.facebook.com/aadeshmasaleofficial" className='w-[7.5rem]'>
-                    <p className="text-white relative hover:text-[#e0191a] group transition-all delay-10 duration-200 ease-linear text-[1rem] scale-y-[120%] w-[6rem] mr-10">
+                    <p className="text-white relative hover:text-[#e0191a] group transition-all delay-10 duration-200 ease-linear text-[1rem] scale-y-[120%] w-[6rem] mr-10 max-lg:w-[4rem] max-lg:text-[0.75rem]">
                         <span>FACEBOOK</span>
                         <span className="absolute left-0 -bottom-[0rem] w-full h-0 bg-[#EBFE00] duration-200 delay-75 -z-10 group-hover:h-full group-hover:transition-all"></span>
                     </p>
                 </Link>
-                <Link href=" https://www.instagram.com/aadeshmasale/" className='w-[8rem]'>
-                    <p className="text-white relative hover:text-[#e0191a] group transition-all delay-10 duration-200 ease-linear text-[1rem] scale-y-[120%] w-[7rem] mr-10">
+                <Link href="https://www.instagram.com/aadeshmasale" className='w-[8rem]'>
+                    <p className="text-white relative hover:text-[#e0191a] group transition-all delay-10 duration-200 ease-linear text-[1rem] scale-y-[120%] w-[7rem] mr-10 max-lg:w-[4rem] max-lg:text-[0.75rem]">
                         <span>INSTAGRAM</span>
                         <span className="absolute left-0 -bottom-[0rem] w-full h-0 bg-[#EBFE00] duration-200 delay-75 -z-10 group-hover:h-full group-hover:transition-all"></span>
                     </p>
                 </Link>
                 <Link href="https://twitter.com/AadeshMasale" className='w-[7.5rem]'>
-                    <p className="text-white relative hover:text-[#e0191a] group transition-all delay-10 duration-200 ease-linear text-[1rem] scale-y-[120%] w-[5rem] mr-10">
+                    <p className="text-white relative hover:text-[#e0191a] group transition-all delay-10 duration-200 ease-linear text-[1rem] scale-y-[120%] w-[5rem] mr-10 max-lg:w-[4rem] max-lg:text-[0.75rem]">
                         <span>TWITTER</span>
                         <span className="absolute left-0 -bottom-[0rem] w-full h-0 bg-[#EBFE00] duration-200 delay-75 -z-10 group-hover:h-full group-hover:transition-all"></span>
                     </p>
                 </Link>
             </div>
-            <div className={!rotate ? 'fixed z-[-10] top-[65%] left-[57%]' : 'fixed z-40 top-[65%] left-[57%]'} ref={show}>
-                <img alt="Aadesh Masala Logo" src="/products/ChikenMasala.png" className='h-[14rem] w-[13rem] -rotate-3' ref={cnt} />
+            <div className={!rotate ? 'hidden fixed top-[65%] left-[57%] max-lg:left-[55%] max-lg:top-[55%]' : 'fixed z-40 top-[65%] left-[57%] max-lg:left-[55%] max-lg:top-[55%] max-sm:top-[50%]'} ref={show}>
+                <img alt="Aadesh Masala Logo" src="/products/ChikenMasala.png" className='h-[14rem] w-[13rem] max-lg:h-[12rem] max-lg:w-[11rem] max-sm:h-[6rem] max-sm:w-[5rem] -rotate-3' />
             </div>
-            <div className={!rotate ? 'fixed z-[-10] top-[15%] left-[40%]' : 'fixed z-40 top-[15%] left-[40%]'} ref={show2}>
-                <img alt="Aadesh Masala Logo" src="/products/JaljeeraMasala.png" className='h-[14rem] w-[13rem] -rotate-12' ref={cnt2} />
+            <div className={!rotate ? 'hidden fixed top-[15%] left-[40%] max-lg:left-[35%] max-lg:top-[15%]' :'fixed z-40 top-[15%] left-[40%] max-lg:left-[35%] max-lg:top-[15%] max-sm:top-[25%] max-sm:left-[38%]'} ref={show2}>
+                <img alt="Aadesh Masala Logo" src="/products/JaljeeraMasala.png" className='h-[14rem] w-[13rem] max-lg:h-[12rem] max-lg:w-[11rem] max-sm:h-[6rem] max-sm:w-[5rem] -rotate-12' />
             </div>
-            <div className={!rotate ? 'fixed z-[-10] top-[20%] left-[75%]' : 'fixed z-40 top-[20%] left-[75%]'} ref={show3}>
-                <img alt="Aadesh Masala Logo" src="/products/ChanaBesan.png" className='h-[14rem] w-[13rem] rotate-12' ref={cnt3} />
+            <div className={!rotate ? 'hidden fixed top-[20%] left-[75%]' :'fixed z-40 top-[20%] left-[75%] max-sm:top-[33%] max-sm:left-[80%]'} ref={show3}>
+                <img alt="Aadesh Masala Logo" src="/products/ChanaBesan.png" className='h-[14rem] w-[13rem] max-lg:h-[12rem] max-lg:w-[11rem] max-sm:h-[6rem] max-sm:w-[5rem] rotate-12' />
             </div>
+
         </div>
     )
 }
