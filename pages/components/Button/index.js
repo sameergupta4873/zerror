@@ -1,11 +1,10 @@
 import React from 'react'
 import styles from './button.module.css'
-import Link from 'next/link'
 
 const Button = ({ text, link }) => {
     return (
-        <Link className={styles.cta} href={'/products'}>
-            <div className={styles.wrapper}>
+        <div className={styles.wrapper}>
+            <a className={styles.cta} href={link}>
                 <span className={styles.span}>Products</span>
                 <span className={styles.span}>
                     <svg className='mt-1 w-[60px] h-[25px] max-lg:w-[30px] max-lg:h-[15px] max-sm:w-[10px] max-sm:h-[5px]' viewBox="0 0 80 43">
@@ -16,8 +15,9 @@ const Button = ({ text, link }) => {
                         </g>
                     </svg>
                 </span>
-            </div>
-        </Link>
+            </a>
+        </div>
+
     )
 }
 

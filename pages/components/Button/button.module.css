@@ -15,7 +15,7 @@ body {
   display: flex;
   justify-content: center;
   /* border:solid 2px white; */
-  margin: 5px auto;
+  margin: 10px;
   width: 15rem;
 }
 
@@ -30,8 +30,8 @@ body {
     border: solid 4px #EBFE00;
     transition: 1s;
     box-shadow: 6px 6px 0 black;
-    transform: skewX(-10deg);
-    width: 6rem;
+    transform: skewX(-15deg);
+    width: 15rem;
 }
 
 .cta:focus {
@@ -119,8 +119,7 @@ body {
         width: 4rem;
     }
     .cta{
-        margin-top: 5px;
         font-size: 10px;
-        padding: 2px 2px;
+        padding: 2px 5px;
     }
 }
