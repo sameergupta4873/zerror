@@ -42,8 +42,9 @@ const Menu = () => {
         const el11 = show.current;
         const el12 = show2.current;
         const el13 = show3.current;
-        const x = event.clientX / window.innerWidth - 0.5;
-        const y = event.clientY / window.innerHeight - 0.5;
+        const x =  event.clientX / window.innerWidth - 0.5;
+        const y =  event.clientY / window.innerHeight - 0.5;
+        console.log(event);
 
         gsap.to(el11, {
             x: x * 50,
