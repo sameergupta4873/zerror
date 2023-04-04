@@ -5,11 +5,19 @@ import Link from 'next/link';
 import { Spin as Hamburger } from 'hamburger-react'
 import { MotionPathPlugin } from 'gsap/dist/MotionPathPlugin';
 import ReactCurvedText from 'react-curved-text';
+import Button from './components/Button/index'
+import Menu from './components/Menu';
+import useWindowSize from '../utils/ResizeHook'
 
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
 const Hero = () => {
-    const [rotate, setrotate] = useState(false)
+    const [rotate, setrotate] = useState(false);
+    const [width, setwidth] = useState(1024)
+    const size = useWindowSize();
+    useEffect(() => {
+      setwidth(size.width)  
+    }, [size])
 
     const track = useRef(null);
     const move = useRef(null);
@@ -48,7 +56,7 @@ const Hero = () => {
                     start: 0.66,
                     end: 0.99,
                 },
-                rotation: -70,
+                rotation: -50,
                 scrollTrigger: {
                     trigger: t,
                     start: '2',
@@ -66,7 +74,7 @@ const Hero = () => {
                     start: 0.33,
                     end: 0.66,
                 },
-                rotation: -40,
+                rotation: -30,
                 scrollTrigger: {
                     trigger: t,
                     start: '2',
@@ -175,37 +183,29 @@ const Hero = () => {
     }
 
     return (
-        <>
-            {/* //////////// */}
-            <svg className='absolute w-[50%] top-[35%] left-[25%] text-transparent' viewBox="0 0 1620 1280" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
-                <path ref={path} d="M0,631.13053q1039.628618-2.949208,1234.276351-660.622611" transform="translate(.000001 0.000001)" fill="none" stroke="#3f5787" stroke-width="0" />
+        <div className="overflow-x-hidden">
+            <svg className='absolute top-[-10%] left-[12rem] text-transparent max-lg:top-[15%] max-lg:left-[9rem] max-sm:left-[4rem] max-sm:top-[13rem]' viewBox="0 0 1620 1280" shapeRendering="geometricPrecision" textRendering="geometricPrecision">
+                <path ref={path} d="M0,708.473914Q1304.811396,713.1978,1404.013008,80.197041" transform="translate(0 0.000001)" fill="none" stroke="#3f5787" strokeWidth="0"/>
             </svg>
-            {/* ////////////////// */}
-            {/* ///////////// */}
-            <div className='w-full h-[62rem] bg-[#e0191a] overflow-hidden' ref={track}>
-                <button className='fixed z-50 top-5 left-8 flex' onClick={() => setrotate(!rotate)}>
-                    <Hamburger color='white' size={30} rounded toggled={rotate} toggle={setrotate} onToggle={handleAnimation} />
-                </button>
-                <img alt="Aadesh Masala Logo" src="aadesh.png" className='absolute z-50 top-[1rem] translate-x-[-50%] left-[50%] h-[10rem] w-[10rem] mx-auto py-5' />
-                <div className={`bg-[#e0191a] z-30 fixed h-[100vh] w-[240rem] left-[-240rem]`} ref={banner}></div>
-                <>
-                    <div className='z-30 bg-[#e0191a] absolute w-[50vw] h-[11.5rem] top-[0rem] left-[7rem]'>
+            <div className='w-full h-[55rem] max-lg:h-[40rem] max-md:h-[28rem] max-sm:h-[24rem] bg-[#e0191a] overflow-hidden' ref={track}>
+                <img alt="Aadesh Masala Logo" src="aadesh.png" className='absolute z-50 top-[1rem] translate-x-[-50%] left-[50%] h-[10rem] w-[10rem] mx-auto py-5 max-sm:w-[6rem] max-sm:h-[7rem]' />
+                <div>
+                    <div className='z-30 bg-[#e0191a] absolute w-[40.5rem] h-[7.25rem] top-[0rem] left-[7rem] max-lg:w-[25.5rem] max-lg:left-[5.5rem] max-md:w-[21rem] max-sm:left-[3rem] max-sm:w-[10.5rem]'>
                     </div>
                     <div className='font' ref={heading}>
                         <ReactCurvedText
-                            width={700}
+                            width={900}
                             height={600}
-                            cx={350}
-                            cy={420}
-                            rx={140}
-                            ry={150}
-                            startOffset={50}
+                            cx={width >1024 ? 280 :width > 640 ? 200 : 100}
+                            cy={width >1024 ? 290 : width > 640 ? 260 : 225}
+                            rx={width >1024 ? 130 : width > 640 ? 90 : 40}
+                            ry={width >1024 ? 130 : width > 640 ? 90 : 40}
+                            startOffset={width > 1024 ? 40 : width > 640 ? 25 : 10}
                             reversed={true}
                             text="Indian Spices"
-                            // className="text-[3rem]"
                             textProps={{
                                 style: {
-                                    fontSize: 40,
+                                    fontSize: width >1024 ? 50: width > 640 ? 30 : 15,
                                 }
                             }}
                             textPathProps={{ "fill": "#EBFE00" }}
@@ -214,89 +214,23 @@ const Hero = () => {
                             svgProps={null}
                         />
                     </div>
-                    <div className={`inline-block w-[50%] absolute mt-[-17rem] ml-[17rem]`} ref={heading2}>
-                        <p className='text-[#EBFE00] title text-[4rem] max-md:text-[2rem]'>AADESH MASALE</p>
-                        <p className="text-[1.5rem] text-gray-200">An amazing range of spices, healthy and nutritious</p>
-                        <Link href="/products">
-                            <button className='px-10 my-5 py-2 border-4 border-[#EBFE00] rounded-[3rem] text-2xl text-[#EBFE00] hover:text-[#e0191a] hover:bg-[#EBFE00] hover:border-[#e0191a]'>
-                                Products
-                            </button>
-                        </Link>
+                    <div className={`inline-block w-[50%] absolute mt-[-25rem] ml-[12rem] max-lg:ml-[8.5rem] max-sm:ml-[4.3rem]`} ref={heading2}>
+                        <p className='text-[#EBFE00] title text-[3rem] max-lg:text-[2.5rem] max-md:text-[2rem] max-sm:text-[1rem]'>AADESH MASALE</p>
+                        <p className="text-[1.5rem] text-gray-200 max-lg:text-[0.75rem] max-md:text-[0.55rem] max-sm:text-[0.35rem]">An amazing range of spices, healthy and nutritious</p>
+                            <Button text={"Products"}/>
                     </div>
-                    {/* <div className='absolute top-[2rem] left-[70%] -rotate-[50deg]' ref={move}>
-                        <img alt="Aadesh Masala Logo" src="/products/ChikenMasala.png" className='h-[20rem] w-[19rem]' />
+                    <div className='absolute top-[2rem] left-[70%] -rotate-[40deg]' ref={move}>
+                        <img alt="Aadesh Masala Logo" src="/products/ChikenMasala.png" className='h-[20rem] w-[19rem] max-lg:h-[11rem] max-lg:w-[10rem] max-md:w-[7rem] max-md:h-[8rem] max-sm:w-[4rem] max-sm:h-[5rem]' />
                     </div>
-                    <div className='absolute top-[1.5rem] left-[50%] -rotate-[22.5deg]' ref={move2}>
-                        <img alt="Aadesh Masala Logo" src="/products/ChanaBesan.png" className='h-[20rem] w-[19rem]' />
+                    <div className='absolute top-[1.5rem] left-[50%] -rotate-[15deg]' ref={move2}>
+                        <img alt="Aadesh Masala Logo" src="/products/ChanaBesan.png" className='h-[20rem] w-[19rem] max-lg:h-[11rem] max-lg:w-[10rem] max-md:w-[7rem] max-md:h-[8rem] max-sm:w-[4rem] max-sm:h-[5rem]' />
                     </div>
-                    <div className='absolute top-[22rem] left-[30%] -rotate-[5deg]' ref={move3}>
-                        <img alt="Aadesh Masala Logo" src="/products/JaljeeraMasala.png" className='h-[20rem] w-[19rem] origin-center' />
-                    </div> */}
-                </>
-                {/* ///////////// */}
-                <div className='fixed z-40 bg-[#e0191a] w-[5rem] h-[6rem] top-[13rem]'>
-                </div>
-                <div className='fixed z-30 top-[13rem] left-[-20rem] '>
-                    <Link href='/'>
-                        <p className="text-white title relative hover:text-[#e0191a] group transition-all delay-10 duration-200 ease-linear text-[3rem] max-md:text-[2rem] scale-y-[120%] px-3 h-[100%] w-[105%] max-md:w-[105%]" ref={list}>
-                            <span>Home</span>
-                            <span className="absolute left-0 -bottom-1 w-full h-0 bg-[#EBFE00] duration-200 delay-75 -z-10 group-hover:h-full group-hover:transition-all"></span>
-                        </p>
-                    </Link>
-                </div>
-                <div className='fixed z-40 bg-[#e0191a] w-[5rem] h-[6rem] top-[20rem]'>
-                </div>
-                <div className='fixed z-30 top-[21rem] left-[-20rem]'>
-                    <Link href='/products'>
-                        <p className="text-white title relative hover:text-[#e0191a] group transition-all delay-10 duration-200 ease-linear text-[3rem] max-md:text-[2rem] scale-y-[120%] px-3 h-[100%] w-[105%] max-md:w-[105%]" ref={list2}>
-                            <span>Products</span>
-                            <span className="absolute left-0 -bottom-1 w-full h-0 bg-[#EBFE00] duration-200 delay-75 -z-10 group-hover:h-full group-hover:transition-all"></span>
-                        </p>
-                    </Link>
-                </div>
-                <div className='fixed z-40 bg-[#e0191a] w-[5rem] h-[6rem] top-[28rem]'>
-                </div>
-                <div className='fixed z-30 top-[29rem] left-[-20rem]'>
-                    <Link href='/about'>
-                        <p className="text-white title relative hover:text-[#e0191a] group transition-all delay-10 duration-200 ease-linear text-[3rem] max-md:text-[2rem] scale-y-[120%] px-3 h-[100%] w-[105%] max-md:w-[105%]" ref={list3}>
-                            <span>About us</span>
-                            <span className="absolute left-0 -bottom-1 w-full h-0 bg-[#EBFE00] duration-200 delay-75 -z-10 group-hover:h-full group-hover:transition-all"></span>
-                        </p>
-                    </Link>
-                </div>
-                <div className='fixed z-40 bg-[#e0191a] w-[5rem] h-[3rem] top-[39rem]'>
-                </div>
-                <div className='fixed z-30 top-[39rem] h-[2rem] w-[20rem] left-[-20rem] flex' ref={list4}>
-                    <Link href="https://www.facebook.com/aadeshmasaleofficial" className='w-[7.5rem]'>
-                        <p className="text-white relative hover:text-[#e0191a] group transition-all delay-10 duration-200 ease-linear text-[1rem] scale-y-[120%] w-[6rem] mr-10">
-                            <span>FACEBOOK</span>
-                            <span className="absolute left-0 -bottom-[0rem] w-full h-0 bg-[#EBFE00] duration-200 delay-75 -z-10 group-hover:h-full group-hover:transition-all"></span>
-                        </p>
-                    </Link>
-                    <Link href="https://www.instagram.com/aadeshmasale" className='w-[8rem]'>
-                        <p className="text-white relative hover:text-[#e0191a] group transition-all delay-10 duration-200 ease-linear text-[1rem] scale-y-[120%] w-[7rem] mr-10">
-                            <span>INSTAGRAM</span>
-                            <span className="absolute left-0 -bottom-[0rem] w-full h-0 bg-[#EBFE00] duration-200 delay-75 -z-10 group-hover:h-full group-hover:transition-all"></span>
-                        </p>
-                    </Link>
-                    <Link href="https://twitter.com/AadeshMasale" className='w-[7.5rem]'>
-                        <p className="text-white relative hover:text-[#e0191a] group transition-all delay-10 duration-200 ease-linear text-[1rem] scale-y-[120%] w-[5rem] mr-10">
-                            <span>TWITTER</span>
-                            <span className="absolute left-0 -bottom-[0rem] w-full h-0 bg-[#EBFE00] duration-200 delay-75 -z-10 group-hover:h-full group-hover:transition-all"></span>
-                        </p>
-                    </Link>
-                </div>
-                <div className={!rotate ? 'fixed z-[-10] top-[-40%] left-[70%] hidden' : 'fixed z-40 top-[65%] left-[57%] hidden'} ref={show}>
-                    <img alt="Aadesh Masala Logo" src="/products/ChikenMasala.png" className='h-[14rem] w-[13rem] -rotate-3 hidden' ref={cnt} />
-                </div>
-                <div className={!rotate ? 'fixed z-[-10] top-[0rem] left-[40%] hidden' : 'fixed z-40 top-[0rem] left-[40%] hidden'} ref={show2}>
-                    <img alt="Aadesh Masala Logo" src="/products/JaljeeraMasala.png" className='h-[14rem] w-[13rem] -rotate-12' ref={cnt2} />
-                </div>
-                <div className={!rotate ? 'fixed z-[-10] top-[20%] left-[75%] hidden' : 'fixed z-40 top-[20%] left-[75%] hidden'} ref={show3}>
-                    <img alt="Aadesh Masala Logo" src="/products/ChanaBesan.png" className='h-[14rem] w-[13rem] rotate-12' ref={cnt3} />
+                    <div className='absolute top-[22rem] left-[30%]' ref={move3}>
+                        <img alt="Aadesh Masala Logo" src="/products/JaljeeraMasala.png" className='h-[20rem] w-[19rem] max-lg:h-[11rem] max-lg:w-[10rem] max-md:w-[7rem] max-md:h-[8rem] max-sm:w-[4rem] max-sm:h-[5rem]' />
+                    </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

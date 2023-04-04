@@ -91,7 +91,7 @@ const Carousel = () => {
                                 key={index}
                                 className="carousel-item content text-center relative w-[20rem] ease-in h-[30rem] transition-all duration-500 hover:w-[35rem] max-md:w-[31.5rem] max-md:h-[35rem] max-sm:h-[18rem] hover:z-30 snap-start"
                             >
-                                <div class="content-overlay"></div>
+                                <div className="content-overlay"></div>
                                 <Link
                                     href={resource.link}
                                     className="h-full w-full aspect-square block bg-origin-padding bg-left-top bg-cover bg-no-repeat z-0"

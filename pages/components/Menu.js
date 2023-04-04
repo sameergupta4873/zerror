@@ -4,11 +4,17 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Link from 'next/link';
 import { Spin as Hamburger } from 'hamburger-react'
 import { MotionPathPlugin } from 'gsap/dist/MotionPathPlugin';
+import useWindowSize from '../../utils/ResizeHook';
 
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
 const Menu = () => {
-    const [rotate, setrotate] = useState(false)
+    const [rotate, setrotate] = useState(false);
+    const [width, setwidth] = useState(1024)
+    const size = useWindowSize();
+    useEffect(() => {
+      setwidth(size.width)  
+    }, [size])
 
     const track = useRef(null);
     const banner = useRef(null);
@@ -94,10 +100,10 @@ const Menu = () => {
 
     return (
         <div className='block bg-[#e0191a]' ref={track}>
-            <button className='fixed z-50 top-5 left-8 flex max-md:left-4 max-md:top-4 max-sm:left-1 max-sm:top-1' onClick={() => setrotate(!rotate)}>
-                <Hamburger color='white' size={30} rounded toggled={rotate} toggle={setrotate} onToggle={handleAnimation} />
+            <button className='fixed z-50 top-5 left-8 flex max-md:left-4 max-md:top-4 max-sm:left-[0rem] max-sm:top-[0.1rem]' onClick={() => setrotate(!rotate)}>
+                <Hamburger color='white' size={width > 640 ? 30 : 20} rounded toggled={rotate} toggle={setrotate} onToggle={handleAnimation} />
             </button>
-            <div className={`bg-[#e0191a] z-30 fixed h-[100vh] w-[120rem] left-[-120rem] max-lg:left-[-130rem]`} ref={banner}></div>
+            <div className={`bg-[#e0191a] z-30 fixed h-[130vh] w-[120rem] left-[-120rem] max-lg:left-[-130rem]`} ref={banner}></div>
             <div className='fixed z-40 bg-[#e0191a] w-[5rem] h-[6rem] top-[28%] max-lg:w-[3rem] max-sm:w-[1rem]'>
             </div>
             <div className='fixed z-30 top-[28%] left-[-20rem] max-lg:left-[-23rem] max-sm:left-[-24.5rem]'>
@@ -128,7 +134,7 @@ const Menu = () => {
                     </p>
                 </Link>
             </div>
-            <div className='fixed z-40 bg-[#e0191a] w-[5rem] h-[3rem] top-[90%] max-lg:w-[3rem]'>
+            <div className='fixed z-40 bg-[#e0191a] w-[5rem] h-[3rem] top-[90%] max-lg:w-[3rem] max-sm:w-[2rem]'>
             </div>
             <div className='fixed z-30 top-[90%] h-[2rem] w-[20rem] left-[-20rem] flex max-lg:left-[-22rem]' ref={list4}>
                 <Link href="https://www.facebook.com/aadeshmasaleofficial" className='w-[7.5rem]'>
@@ -150,13 +156,13 @@ const Menu = () => {
                     </p>
                 </Link>
             </div>
-            <div className={!rotate ? 'hidden fixed top-[65%] left-[57%] max-lg:left-[55%] max-lg:top-[55%]' : 'fixed z-40 top-[65%] left-[57%] max-lg:left-[55%] max-lg:top-[55%] max-sm:top-[50%]'} ref={show}>
+            <div className={!rotate ? 'hidden fixed top-[65%] left-[57%] max-lg:left-[55%] max-lg:top-[55%]' : 'fixed z-40 top-[65%] left-[57%] max-lg:left-[55%] max-lg:top-[55%] max-sm:top-[70%]'} ref={show}>
                 <img alt="Aadesh Masala Logo" src="/products/ChikenMasala.png" className='h-[14rem] w-[13rem] max-lg:h-[12rem] max-lg:w-[11rem] max-sm:h-[6rem] max-sm:w-[5rem] -rotate-3' />
             </div>
             <div className={!rotate ? 'hidden fixed top-[15%] left-[40%] max-lg:left-[35%] max-lg:top-[15%]' :'fixed z-40 top-[15%] left-[40%] max-lg:left-[35%] max-lg:top-[15%] max-sm:top-[25%] max-sm:left-[38%]'} ref={show2}>
                 <img alt="Aadesh Masala Logo" src="/products/JaljeeraMasala.png" className='h-[14rem] w-[13rem] max-lg:h-[12rem] max-lg:w-[11rem] max-sm:h-[6rem] max-sm:w-[5rem] -rotate-12' />
             </div>
-            <div className={!rotate ? 'hidden fixed top-[20%] left-[75%]' :'fixed z-40 top-[20%] left-[75%] max-sm:top-[33%] max-sm:left-[80%]'} ref={show3}>
+            <div className={!rotate ? 'hidden fixed top-[20%] left-[75%]' :'fixed z-40 top-[20%] left-[75%] max-sm:top-[45%] max-sm:left-[70%]'} ref={show3}>
                 <img alt="Aadesh Masala Logo" src="/products/ChanaBesan.png" className='h-[14rem] w-[13rem] max-lg:h-[12rem] max-lg:w-[11rem] max-sm:h-[6rem] max-sm:w-[5rem] rotate-12' />
             </div>
 

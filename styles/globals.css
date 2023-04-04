@@ -5,6 +5,7 @@ body {
   margin: 0;
   font-family: 'Josefin Sans', sans-serif;
   background-color: #e0191a;
+  overflow-x: hidden;
 }
 
 a {
@@ -14,6 +15,10 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+html{
+  overflow-x: hidden;
 }
 
 .font{

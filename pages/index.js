@@ -1,5 +1,4 @@
 import SwiperS from './components/Swiper'
-import InfinteSlider from './components/InfinteSlider/InfinteSlider'
 import Link from 'next/link'
 import products from '../data/products'
 import { useState } from 'react'
@@ -11,9 +10,9 @@ import Menu from './components/Menu'
 export default function Home() {
   const [index, setIndex] = useState(0);
   return (
-    <div>
+    <div className="overflow-x-hidden w-[100vw] mx-auto">
       <Menu/>
-      {/* <Hero /> */}
+      <Hero />
       <div className='bg-[#e0191a] pt-[5rem] pb-[5rem]'>
         <div className='w-[80%] mx-auto py-[1rem]'>
           <p className='text-[2rem] max-md:px-6 max-md:text-[1.25rem] max-md:leading-[2.2rem] max-sm:text-[1rem] max-sm:leading-[1.75rem] max-sm:px-2 tracking-wider text-center leading-[4.3rem] text-[#EBFE00]'>

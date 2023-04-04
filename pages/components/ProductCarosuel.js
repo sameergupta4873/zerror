@@ -29,7 +29,7 @@ export default class ProductCarosuel extends Component {
                         slidesToShow: 1,
                         slidesToScroll: 1,
                         initialSlide: 3,
-                        dots:false
+                        dots: false
                     }
                 },
                 {
@@ -37,7 +37,7 @@ export default class ProductCarosuel extends Component {
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1,
-                        dots:false
+                        dots: false
                     }
                 }
             ]
@@ -47,8 +47,8 @@ export default class ProductCarosuel extends Component {
                 <Slider {...settings}>
                     {product && product.map((item) => {
                         return (
-                            <div key={item.id}> 
-                                <Link  className={`h-30 w-[90%] block m-5 pt-16 p-5 rounded-[25px]`} href={item.href} style={{ backgroundColor: item.bg }}>
+                            <div key={item.id}>
+                                <Link className={`h-30 w-[90%] block m-5 pt-16 p-5 rounded-[25px]`} href={item.href} style={{ backgroundColor: item.bg }}>
                                     <img className="h-[15rem] w-[13rem] max-sm:h-[12rem] max-sm:w-[10rem] mx-[auto] transition duration-500 hover:scale-110" src={'/' + item.imageSrc} alt="" />
                                     <p className='text-md flex justify-between font-extrabold mt-6'>{item.name}    <span className='mr-3'>{item.size[0]}g{item.size[1] && ','} {item.size[1]}{item.size[1] && 'g'}</span></p>
                                     <div className='mt-4 flex justify-between'>
@@ -70,7 +70,7 @@ export default class ProductCarosuel extends Component {
                                             </svg>
                                         </Link>
                                     </div>
-                    </Link>
+                                </Link>
                             </div>
                         )
                     })}
