@@ -1,10 +1,10 @@
-import SwiperS from './components/Swiper'
 import Link from 'next/link'
 import products from '../data/products'
 import { useState } from 'react'
 import Hero from './hero'
 import ProductCarosuel from './components/ProductCarosuel'
 import Menu from './components/Menu'
+import Recipes from './components/RecipeCarousel'
 
 
 export default function Home() {
@@ -39,7 +39,7 @@ export default function Home() {
       </div>
       <ProductCarosuel/>
       <div className='bg-[#e0191a] my-36 max-sm:my-16'>
-        <SwiperS />
+        <Recipes />
       </div>
     </div>
   )

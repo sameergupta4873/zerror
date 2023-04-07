@@ -44,6 +44,7 @@ export default class ProductCarosuel extends Component {
         };
         return (
             <div className="px-28 max-sm:px-12">
+                
                 <Slider {...settings}>
                     {product && product.map((item) => {
                         return (

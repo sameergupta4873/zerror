@@ -11,7 +11,7 @@ const about = () => {
             <section className="bg-[#e0191a] px-20 max-lg:px-8 max-md:px-4">
                 <div className="gap-16 items-center py-8 px-20 w-[100%] max-sm:px-7">
                     <div className="font-light text-gray-100 sm:text-lg">
-                        <h2 className="mb-20 title text-5xl tracking-tight font-extrabold text-white max-lg:text-4xl max-lg:mb-10 max-sm:text-2xl">Aadesh Masale</h2>
+                        <h2 className="mb-20 flex title text-5xl tracking-tight font-extrabold text-white max-lg:text-4xl max-lg:mb-10 max-sm:text-2xl"> <span>Aadesh Masale </span><img src="/stickers/chili.png" className='w-[13rem] h-[7rem] absolute top-[0%] left-[36%]' /></h2>
                         <div className='flex justify-between max-md:flex-col'>
                             <p className="mb-4 w-[65%] max-lg:text-sm max-lg:w-[75%] max-md:w-[115%] max-sm:w-full">Aadesh Masale Approved by AGMARK & ISO, HACCP Established in the year 2005, at Jungle Ramnagar, Raipur Fulwari, Amethi, District Amethi in India, We “MAHESH GRIH UDYOG”, is engaged in manufacturing and supplying Nutritious and Quality Food products.
                                 Our offered food product include SABUT GARAM-MASALA. Highly nutritious, our range is hygienically processed using advance technology to retain all its essential properties.
@@ -25,7 +25,11 @@ const about = () => {
                             </p>
                             <img src="/about.jpg" className='h-[31rem] w-[21rem] rounded-lg ml-10 max-lg:h-[31rem] max-lg:w-[15rem] max-md:w-[130%] max-md:ml-0 max-md:h-[75%] max-md:text-center'></img>
                         </div>
+                        <h2 className="mt-20 mb-10 title text-5xl tracking-tight font-extrabold text-white max-lg:text-3xl max-sm:text-2xl max-sm:mt-10 max-sm:mb-5">AAdesh Ma</h2>
                         <h2 className="mt-20 mb-10 title text-5xl tracking-tight font-extrabold text-white max-lg:text-3xl max-sm:text-2xl max-sm:mt-10 max-sm:mb-5">Our Story</h2>
+                        <div className='w-[100%] h-[30rem] relative flex justify-center'>
+                            <img src="/stickers/pow4.png" className='h-[25rem] absolute w-[75%]' />
+                        </div>
                         <div className=''>
                             {/* <img src="/about2.jpg" className='h-[31rem] w-[21rem] rounded-lg mt-20'></img> */}
                             <div className='flex max-md:flex-col'>

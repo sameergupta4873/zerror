@@ -88,6 +88,111 @@ html{
   top: 80%;
 }
 
+.elastic-carousal-cont {
+  display: flex;
+  width: calc(80vw + 4*10px);
+  margin: auto;
+  height: 80vh;
+}
+
+.elas-cont {
+  width: 20vw;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  /* min-width: 20vw; */
+  margin: 0 5px;
+  border-radius: 15px;
+  transition: all .3s ease;
+}
+
+.elastic-carousal-cont:hover .elas-cont {
+  width: calc(50vw/3); /* this line is not important since display flex auto adjusts width*/
+}
+
+.elas-cont:hover {
+  width: 30vw !important;
+}
+.elas-img {
+  position: absolute;
+  top: 0;
+  transition: all .3s ease;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: fit-content;
+}
+.black-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .7);
+  z-index: 1;
+  transform: translateY(100%);
+  transition: all .3s ease;
+  transition-delay: 0s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+}
+.black-t{
+  font-size: 34px;
+  margin: 30px 0;
+  /* width: 17vw; */
+}
+.black-p{
+  
+  font-size: 18px;
+  text-align: justify;
+  width: 18vw;
+  line-height: 30px;
+}
+.elas-cont:hover .black-overlay{
+  transform: translateY(0);
+}
+.elas-cont:hover .elas-img{
+  transform: translateX(-50%) scale(1.1);
+}
+
+.fade-in-text {
+  font-family: Arial;
+  font-size: 60px;
+  animation: fadeIn 5s;
+  -webkit-animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 
 
 

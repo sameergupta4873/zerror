@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Menu from './components/Menu'
 
 function Form() {
@@ -8,16 +8,24 @@ function Form() {
     const [company, setcompany] = useState(null);
     const [country, setcountry] = useState(null);
     const [message, setmessage] = useState(null);
-    const submitHandler = async () =>{
+    const [num, setnum] = useState(null);
+    const [city, setcity] = useState(null);
+    const [state, setstate] = useState(null);
+    const [enquiry, setenquiry] = useState(null);
+    const submitHandler = async () => {
         const form = {
             name,
-            email,
             company,
+            city,
+            state,
             country,
+            enquiry,
+            email,
+            num,
             message
         }
 
-        const response = fetch( '/api/submit', {
+        const response = fetch('/api/submit', {
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
@@ -29,41 +37,57 @@ function Form() {
         const content = (await response).json();
         console.log(content.data);
     }
+    const [scrollY, setscrollY] = useState(0);
+    const handleScroll = () => {
+        setscrollY(window.scrollY);
+      };
+      
+      useEffect(() => {
+        window.addEventListener("scroll", handleScroll); 
+        return () => window.removeEventListener("scroll", handleScroll);
+      });
     return (
-        <div className="h-96 w-full mb-80">
-            <Menu/>
-            <div className="w-full flex items-center justify-center my-12 mx-5">
-                <div className="absolute top-40 bg-white shadow rounded py-12 lg:px-28 px-8">
-                    <p className="md:text-3xl text-xl font-bold leading-7 text-center text-gray-700">Let’s chat and get a quote!</p>
-                    <div className="md:flex items-center mt-12">
-                        <div className="md:w-72 flex flex-col">
-                            <label className="text-base font-semibold leading-none text-gray-800">Name</label>
-                            <input tabIndex={0} arial-label="Please input name" type="name" className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100" placeholder="Please input  name" onChange={(e)=>setname(e.target.value)} />
+        <div className="h-96 w-full mb-[40rem]">
+            {/* <Menu/> */}
+            <div className={ scrollY <= 0 ? `h-[100vh] w-[100vw] bg-cover  bg-no-repeat bg-[url('/contact.jpg')] transition-all duration-200 delay-200` : `h-[100vh] w-[100vw] bg-cover brightness-50 bg-no-repeat bg-[url('/contact.jpg')]` }></div>
+            <div className="flex absolute top-[30rem] w-[75%] h-[40rem] ml-[12.5%] mr-[12.5%] bg-white shadow-lg">
+                <div className="w-[60%] p-10">
+                    <div className="text-black">
+                        <h1 className="text-[1.5rem]">Know More About India's Largest Spice Company</h1>
+                        <div className="my-5 container mx-auto grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 py-3 pt-4 gap-8">
+                            <input placeholder="Name*" onChange={(e)=>setname(e.target.value)} className="border border-gray-700 text-lg rounded focus:none px-4 pt-4 pb-3" />
+                            <input placeholder="Company*" onChange={(e)=>setcompany(e.target.value)}  className="border border-gray-700 text-lg rounded focus:none px-4 pt-4 pb-3" />
+                            <input placeholder="City*" onChange={(e)=>setcity(e.target.value)}  className="border border-gray-700 text-lg rounded focus:none px-4 pt-4 pb-3" />
+                            <input placeholder="State*" onChange={(e)=>setstate(e.target.value)}  className="border border-gray-700 text-lg rounded focus:none px-4 pt-4 pb-3" />
+                            <input placeholder="Country*" onChange={(e)=>setcountry(e.target.value)}  className="border border-gray-700 text-lg rounded focus:none px-4 pt-4 pb-3" />
+                            <input placeholder="Enquiry Type*" onChange={(e)=>setenquiry(e.target.value)}  className="border border-gray-700 text-lg rounded focus:none px-4 pt-4 pb-3" />
+                            <input placeholder="Email*" onChange={(e)=>setemail(e.target.value)}  className="border border-gray-700 text-lg rounded focus:none px-4 pt-4 pb-3" />
+                            <input placeholder="Number*" onChange={(e)=>setnum(e.target.value)}  className="border border-gray-700 text-lg rounded focus:none px-4 pt-4 pb-3" />
                         </div>
-                        <div className="md:w-72 flex flex-col md:ml-6 md:mt-0 mt-4">
-                            <label className="text-base font-semibold leading-none text-gray-800">Email Address</label>
-                            <input tabIndex={0} arial-label="Please input email address" type="name" className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100" placeholder="Please input email address" onChange={(e)=>setemail(e.target.value)} />
-                        </div>
+                        <input placeholder="Message" onChange={(e)=>setnum(e.target.value)}  className="w-[100%] border border-gray-700 text-lg rounded focus:none px-4 pt-4 pb-3" />
+                        <button onClick={submitHandler} className="mt-7 rounded text-lg bg-black text-white px-10 py-2">Submit</button>
                     </div>
-                    <div className="md:flex items-center mt-8">
-                        <div className="md:w-72 flex flex-col">
-                            <label className="text-base font-semibold leading-none text-gray-800">Company name</label>
-                            <input tabIndex={0} role="input" arial-label="Please input company name" type="name" className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100 " placeholder="Please input company name" onChange={(e)=>setcompany(e.target.value)} />
+                </div>
+                <div className="w-[40%] bg-black p-10">
+                    <div className="text-white">
+                        <h1 className="text-[1.75rem] font-extrabold">Get in Touch</h1>
+                        <div className="my-7">
+                            <div className="flex">
+                                <img alt="image" className="mt-[0rem] mr-[1rem]" src="https://www.everestfoods.com/wp-content/uploads/2021/09/pin-1.svg" />
+                                <p className="text-[1.3rem] font-extrabold">Address</p>
+                            </div>
+                            <p className="w-[20rem] ml-[2.5rem] mt-[0.25rem] text-[1rem] text-white max-sm:text-sm max-sm:w-[13rem]">Jangal Ramnagar, Raipur, Phulawari, Amethi, UP 227405</p>
+                            <div className="flex mt-[1rem]">
+                                <img alt="image" className="mt-[1rem] mr-[1rem]" src="https://www.everestfoods.com/wp-content/uploads/2021/09/tel.svg" />
+                                <p className="text-xl font-extrabold mt-[1rem]">Customer Care No</p>
+                            </div>
+                            <p className="w-[20rem] ml-[2.5rem] mt-[1rem] text-[1rem] text-white">+91 7607581221, +91 8400382790</p>
+                            <div className="flex mt-[1rem]">
+                                <img alt="image" className="mt-[1rem] mr-[1rem]" src="https://www.everestfoods.com/wp-content/uploads/2021/09/mail.svg" />
+                                <p className="text-xl font-extrabold mt-[1rem]">Customer Care Email</p>
+                            </div>
+                            <p className="w-[20rem] ml-[2.5rem] mt-[1rem] text-[1.1rem] text-white">help.aadeshmasale@gmail.com</p>
                         </div>
-                        <div className="md:w-72 flex flex-col md:ml-6 md:mt-0 mt-4">
-                            <label className="text-base font-semibold leading-none text-gray-800">Country</label>
-                            <input tabIndex={0} arial-label="Please input country name" type="name" className="text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100" placeholder="Please input country name" onChange={(e)=>setcountry(e.target.value)} />
-                        </div>
-                    </div>
-                    <div>
-                        <div className="w-full flex flex-col mt-8">
-                            <label className="text-base font-semibold leading-none text-gray-800">Message</label>
-                            <textarea tabIndex={0} aria-label="leave a message" role="textbox" type="name" className="h-36 text-base leading-none text-gray-900 p-3 focus:oultine-none focus:border-indigo-700 mt-4 bg-gray-100 border rounded border-gray-200 placeholder-gray-100 resize-none" defaultValue={""} onChange={(e)=>setmessage(e.target.value)} />
-                        </div>
-                    </div>
-                    <p className="text-xs leading-3 text-gray-600 mt-4">By clicking submit you agree to our terms of service, privacy policy and how we use data as stated</p>
-                    <div className="flex items-center justify-center w-full">
-                        <button className="mt-9 text-base font-semibold leading-none text-white py-4 px-10 bg-indigo-700 rounded hover:bg-indigo-600 focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 focus:outline-none" onClick={submitHandler}>SUBMIT</button>
                     </div>
                 </div>
             </div>

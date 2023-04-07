@@ -63,7 +63,7 @@ const Hero = () => {
                     end: '+=1200',
                     scrub: true,
                 }
-            });
+        });
         gsap.to(el2,
             {
                 duration: 100,

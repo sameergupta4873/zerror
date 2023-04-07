@@ -3,13 +3,12 @@ import products from '../../data/products'
 import { useRouter } from 'next/router';
 import Link from 'next/link'
 import Menu from '../components/Menu';
-import SwiperS from '../components/Swiper'
+import Recipes from '../components/RecipeCarousel'
 
 const Product = () => {
 
   const router = useRouter();
   const id = Number(router.asPath.split("product/")[1])
-  console.log(id);
   return (
     <div className='bg-[#e0191a]'>
       <Menu />
@@ -79,7 +78,7 @@ const Product = () => {
             </div>
           </section>
           <div className='bg-[#e0191a] mt-20 max-md:mt-0 max-sm:mt-5'>
-            <SwiperS />
+            <Recipes />
           </div>
         </>
       }
